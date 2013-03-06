@@ -1,3 +1,4 @@
 --type-add=ruby=.haml,.rake,.rsel
 --type-set=smarty=.tpl
 --type-set=cakeview=.ctp,.thtml
+--type-set=markdown=.md,.markdown
