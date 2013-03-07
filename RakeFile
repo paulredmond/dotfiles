@@ -1,0 +1,27 @@
+def get_excludes
+  exclude  = %w(.git .gitignore README.md RakeFile)
+
+  if (File.exists? ('.gitignore'))
+    File.open('.gitignore', 'r').each_line do |line|
+      exclude.push(line) unless exclude.include? line
+    end
+  end
+
+  exclude
+end
+
+exclude = get_excludes
+
+desc 'Install dotfiles'
+task :install do
+
+  current_dir = File.dirname(__FILE__)
+  Dir.foreach(current_dir) do |item|
+    next if item  == '.' or item == '..' or exclude.include? item or item[0] == '.'
+    dest = Dir.home + "/.#{item}"
+    File.symlink(item, dest) && puts("Symlinking #{item} -> #{dest}") unless File.symlink?(dest) or File.exists?(dest)
+  end
+
+  puts "Installation complete!"
+
+end
