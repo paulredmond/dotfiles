@@ -18,8 +18,9 @@ task :install do
   current_dir = File.dirname(__FILE__)
   Dir.foreach(current_dir) do |item|
     next if item  == '.' or item == '..' or exclude.include? item or item[0] == '.'
+    src  = current_dir + "/#{item}"
     dest = Dir.home + "/.#{item}"
-    File.symlink(item, dest) && puts("Symlinking #{item} -> #{dest}") unless File.symlink?(dest) or File.exists?(dest)
+    File.symlink(src, dest) && puts("Symlinking #{dest} -> #{src}") unless File.symlink?(dest) || File.exists?(dest)
   end
 
   puts "Installation complete!"
