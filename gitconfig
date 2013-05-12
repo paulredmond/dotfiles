@@ -34,7 +34,7 @@
     au = add -u # Add changed files, but not new ones.
     unstage = reset HEAD
     amend = commit --amend
-    last = log -1 HEAD
+    last = log -1 HEAD --numstat
     dtag = !git tag -a release-`date +%Y%m%d%H%M`
     graph = log --graph --pretty=oneline --abbrev-commit
     # List commits in short form
