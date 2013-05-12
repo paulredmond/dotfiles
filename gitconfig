@@ -31,7 +31,6 @@
     df = diff
     dc = diff --cached
     lg = log -p
-    mt = mergetool
     au = add -u # Add changed files, but not new ones.
     unstage = reset HEAD
     amend = commit --amend
