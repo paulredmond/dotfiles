@@ -107,3 +107,13 @@ function serve()
 {
   python -m SimpleHTTPServer 8000
 }
+
+function findprocess()
+{
+    ps aux | grep $1
+}
+
+function myprocess()
+{
+    ps -ef | grep $USER
+}
