@@ -66,7 +66,7 @@ alias gs='git status'
 
 cdpath=( ~ ~/www/sheknows ~/www/sheknows/dev.sheknows.com ~/www )
 
-source /opt/boxen/env.sh
+if [[ "$OSTYPE" =~ "darwin" ]] ; then source /opt/boxen/env.sh; fi
 # source /opt/boxen/nvm/nvm.sh
 
 
