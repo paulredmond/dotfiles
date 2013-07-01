@@ -64,6 +64,7 @@ alias rspec='nocorrect rspec '
 alias ....='cd ../../../..'
 
 # Git aliases
+alias g='git'
 alias gs='git status'
 
 
