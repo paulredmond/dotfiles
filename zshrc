@@ -61,7 +61,7 @@ alias mate='nocorrect mate'
 alias p='nocorrect pstorm'
 alias npm='nocorrect npm'
 alias rspec='nocorrect rspec '
-alias ....='cd ../../../..'
+alias ....='cd ../../..'
 
 # Git aliases
 alias g='git'
