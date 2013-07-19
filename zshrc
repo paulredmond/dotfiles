@@ -63,6 +63,8 @@ alias npm='nocorrect npm'
 alias rspec='nocorrect rspec '
 alias ....='cd ../../..'
 
+alias lsh='ls -lah'
+
 # Git aliases
 alias g='git'
 alias gs='git status'
