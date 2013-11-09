@@ -38,8 +38,7 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correctall && setopt correct
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin:~/Dropbox/bin:/usr/local/share/npm/bin:/usr/local/sbin:/opt/boxen/nvm/v0.8.8/bin:$PATH
-export NODE_PATH="/usr/local/lib/node:/opt/boxen/nvm/v0.8.8/lib/node_modules"
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin:~/Dropbox/bin:/usr/local/share/npm/bin:/usr/local/sbin:$PATH
 
 alias redis.start="redis-server /usr/local/etc/redis.conf"
 alias memcached.start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist"
@@ -72,7 +71,10 @@ alias gs='git status'
 
 cdpath=( ~ ~/www/sheknows ~/www/sheknows/dev.sheknows.com ~/www )
 
-if [[ "$OSTYPE" =~ "darwin" ]] ; then source /opt/boxen/env.sh; fi
+if [[ "$OSTYPE" =~ "darwin" ]] ; then
+    source /opt/boxen/env.sh;
+    export TM_RUBY=$RBENV_ROOT/shims/ruby
+fi
 # source /opt/boxen/nvm/nvm.sh
 
 
