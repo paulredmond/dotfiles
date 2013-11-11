@@ -1,6 +1,8 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+export TERM="xterm-256color"
+
 # export RBENV_VERSION=1.9.3
 
 # Set name of the theme to load.
@@ -28,7 +30,7 @@ ZSH_THEME="af-magic"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew cap composer jira phing rails rails3 rails4 rake ruby svn vagrant gem cake ant symfony2 github bundler heroku)
+plugins=(git brew cap composer jira phing rails rails3 rails4 rake ruby svn vagrant gem cake ant symfony2 bundler heroku)
 
 if [[ "$OSTYPE" != "darwin"* ]] ; then plugins[$(($#plugins+1))]=ssh-agent; fi
 
@@ -38,18 +40,9 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correctall && setopt correct
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin:~/Dropbox/bin:/usr/local/share/npm/bin:/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin:~/Dropbox/bin:/usr/local/sbin:$PATH
 
-alias redis.start="redis-server /usr/local/etc/redis.conf"
-alias memcached.start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist"
-alias memcached.launcher='ln -sfv /usr/local/opt/memcached/*.plist ~/Library/LaunchAgents'
-alias mongo.start='mongod'
-alias mongo.launcher='ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents'
-alias redis.launcher='ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents'
-alias redis.launch='launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist'
-alias redis.start='redis-server /usr/local/etc/redis.conf'
-alias beanstalkd.launcher='ln -sfv /usr/local/opt/beanstalk/*.plist ~/Library/LaunchAgents'
-alias beanstalkd.launch='launchctl load ~/Library/LaunchAgents/homebrew.mxcl.beanstalk.plist'
+# Default Aliases
 alias ack='nocorrect ack'
 alias vagrant='nocorrect vagrant'
 alias subl='nocorrect subl'
@@ -61,22 +54,17 @@ alias p='nocorrect pstorm'
 alias npm='nocorrect npm'
 alias rspec='nocorrect rspec '
 alias ....='cd ../../..'
-
 alias lsh='ls -lah'
 
 # Git aliases
 alias g='git'
 alias gs='git status'
 
-
-cdpath=( ~ ~/www/sheknows ~/www/sheknows/dev.sheknows.com ~/www )
-
-if [[ "$OSTYPE" =~ "darwin" ]] ; then
-    source /opt/boxen/env.sh;
-    export TM_RUBY=$RBENV_ROOT/shims/ruby
+# Local config
+if [[ -e $HOME/.zshrc.local ]]
+then
+    source $HOME/.zshrc.local
 fi
-# source /opt/boxen/nvm/nvm.sh
-
 
 #
 # Provides a review workflow for pull requests. Best used with `prmerge` when ready to merge.
