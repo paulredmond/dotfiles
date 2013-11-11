@@ -1,0 +1,8 @@
+# Example mac configuration with sample conditionals.
+# add to cdpath
+# cdpath=( ~ ~/path-two)
+
+if [[ "$OSTYPE" =~ "darwin" ]] ; then
+    source /opt/boxen/env.sh;
+    export TM_RUBY=$RBENV_ROOT/shims/ruby
+fi
