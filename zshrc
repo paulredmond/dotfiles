@@ -10,7 +10,8 @@ export TERM="xterm-256color"
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="af-magic"
-# ZSH_THEME="robbyrussell"
+ZSH_THEME="miloshadzic"
+#ZSH_THEME="robbyrussell"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -30,7 +31,7 @@ ZSH_THEME="af-magic"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew cap composer jira phing rails rails3 rails4 rake ruby svn vagrant gem cake ant symfony2 bundler heroku)
+plugins=(git brew cap composer jira phing rails rake ruby svn gem cake ant symfony2 bundler heroku)
 
 if [[ "$OSTYPE" != "darwin"* ]] ; then plugins[$(($#plugins+1))]=ssh-agent; fi
 
@@ -40,13 +41,13 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correctall && setopt correct
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin:~/Dropbox/bin:/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$PATH
 
 # Default Aliases
 alias c='cd'
 alias ack='nocorrect ack'
-alias vagrant='nocorrect vagrant'
-alias subl='nocorrect subl'
+# alias vagrant='nocorrect vagrant'
+#alias subl='nocorrect subl'
 alias composer='composer.phar'
 alias mongod='nocorrect mongod'
 alias rake='noglob rake'
@@ -56,6 +57,10 @@ alias npm='nocorrect npm'
 alias rspec='nocorrect rspec '
 alias ....='cd ../../..'
 alias lsh='ls -lah'
+alias console='nocorrect console'
+
+# NPM
+alias npm-exec='PATH=$(npm bin):$PATH'
 
 # Git aliases
 alias g='git'
