@@ -44,7 +44,6 @@ unsetopt correctall && setopt correct
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$PATH
 
 # Default Aliases
-alias c='cd'
 alias ack='nocorrect ack'
 # alias vagrant='nocorrect vagrant'
 #alias subl='nocorrect subl'
