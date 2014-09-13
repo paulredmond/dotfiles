@@ -9,7 +9,7 @@ export TERM="xterm-256color"
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="af-magic"
+#ZSH_THEME="af-magic"
 ZSH_THEME="miloshadzic"
 #ZSH_THEME="robbyrussell"
 
@@ -47,7 +47,6 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$PATH
 alias ack='nocorrect ack'
 # alias vagrant='nocorrect vagrant'
 #alias subl='nocorrect subl'
-alias composer='composer.phar'
 alias mongod='nocorrect mongod'
 alias rake='noglob rake'
 alias mate='nocorrect mate'
@@ -118,3 +117,6 @@ function myprocess()
 {
     ps -ef | grep $USER
 }
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
