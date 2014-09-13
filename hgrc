@@ -1,0 +1,10 @@
+[ui]
+username = Paul Redmond <paulrredmond@gmail.com>
+editor = vim
+
+[extensions]
+color =
+hgk =
+
+[hgk]
+path=~/Dropbox/bin/hgk
