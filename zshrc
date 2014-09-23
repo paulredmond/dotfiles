@@ -120,3 +120,6 @@ function myprocess()
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/paul/.gvm/bin/gvm-init.sh" ]] && source "/Users/paul/.gvm/bin/gvm-init.sh"
