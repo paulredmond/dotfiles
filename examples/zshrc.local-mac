@@ -2,6 +2,8 @@
 # add to cdpath
 # cdpath=( ~ ~/path-two)
 
+export EDITOR='mate -w'
+
 if [[ "$OSTYPE" =~ "darwin" ]] ; then
     source /opt/boxen/env.sh;
     export TM_RUBY=$RBENV_ROOT/shims/ruby
