@@ -1,2 +1,5 @@
 include = "{$include,.*}"
 exclude = "{$exclude,.git,.idea}"
+
+[ *.blade.php ]
+fileType = 'text.blade'
