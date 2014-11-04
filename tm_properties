@@ -1,5 +1,12 @@
 include = "{$include,.*}"
 exclude = "{$exclude,.git,.idea}"
 
+[ * ]
+softTabs = true
+tabSize  = 4
+
 [ *.blade.php ]
 fileType = 'text.blade'
+
+[ *.json ]
+tabSize = 2
