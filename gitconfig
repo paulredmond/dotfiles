@@ -47,3 +47,62 @@
     graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
     plog = log --pretty=format:\"%h %Cblue%cr%Creset %cn %Cgreen%s%Creset\"
 
+[user]
+	name = paulredmond
+    email = paul.redmond@sheknows.com
+[core]
+    excludesfile = /opt/boxen/config/git/gitignore
+    editor = mate -wl1
+    # editor = vim
+    autocrlf = input
+[color]
+    ui = true
+    diff = auto
+    status = auto
+    branch = auto
+[branch]
+    autosetuprebase = always
+[alias]
+    ci = commit
+    b  = branch
+    br = branch
+    co = checkout
+    s  = status
+    st = status
+    up = pull --rebase
+    mt = mergetool
+    undo = reset --hard
+    cp = cherry-pick
+    d  = diff
+    dc = diff --cached
+    lg = log -p
+    au = add -u # Add changed files, but not new ones.
+    unstage = reset HEAD
+    amend = commit --amend
+    pop = stash pop
+    last = log -1 HEAD --numstat
+    dtag = !git tag -a release-`date +%Y%m%d%H%M`
+    graph = log --graph --pretty=oneline --abbrev-commit
+    # List commits in short form
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    # List commits showing changed files
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    le = log --oneline --decorate
+    fshow = ! sh -c 'git show --pretty="format:" --name-only $1 | grep -v "^$" | uniq | sed -e "s#^#`git rev-parse --show-toplevel`/#"'
+    # List aliases
+    la = "!git config -l | grep alias | cut -c 7-"
+    graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+    plog = log --pretty=format:\"%h %Cblue%cr%Creset %cn %Cgreen%s%Creset\"
+	r = reset
+[mergetool]
+    keepBackup = false
+[merge]
+	tool = opendiff
+[hub]
+    protocol = https
+[credential]
+    helper = /opt/boxen/bin/boxen-git-credential
+[help]
+    autocorrect = 1
+[push]
+    default = simple

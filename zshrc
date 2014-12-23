@@ -122,4 +122,9 @@ function myprocess()
 export PATH="/usr/local/heroku/bin:$PATH"
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/paul/.gvm/bin/gvm-init.sh" ]] && source "/Users/paul/.gvm/bin/gvm-init.sh"
+# [[ -s "/Users/paul/.gvm/bin/gvm-init.sh" ]] && source "/Users/paul/.gvm/bin/gvm-init.sh"
+# export PATH=$HOME/.rbenv/bin:$PATH
+
+# eval "$(rbenv init -)"
+
+export PATH=/opt/chefdk/bin:$PATH

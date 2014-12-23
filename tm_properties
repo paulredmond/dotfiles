@@ -1,9 +1,20 @@
+fontSize = 22
+
 include = "{$include,.*}"
 exclude = "{$exclude,.git,.idea}"
+
+softTabs = true
+tabSize = 4
+
+[ source ]
+tabSize = 4
 
 [ * ]
 softTabs = true
 tabSize  = 4
+
+[ *.php ]
+softTabs = true
 
 [ *.blade.php ]
 fileType = 'text.blade'
