@@ -11,8 +11,7 @@ export TERM="xterm-256color"
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="af-magic"
 ZSH_THEME="miloshadzic"
-#ZSH_THEME="robbyrussell"
-
+#ZSH_THEME="bureau"
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
