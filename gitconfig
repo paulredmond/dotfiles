@@ -3,9 +3,10 @@
     email = paul.redmond@sheknows.com
 [core]
     excludesfile = ~/.gitignore 
-    editor = mate -wl1
-    # editor = vim
+    # editor = mate -wl1
+    editor = vim
     autocrlf = input
+    ignorecase = false
 [color]
     ui = true
     diff = auto
