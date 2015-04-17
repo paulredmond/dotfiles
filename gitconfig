@@ -33,6 +33,7 @@
     amend = commit --amend
     pop = stash pop
     last = log -1 HEAD --numstat
+    branchdate = !git for-each-ref --sort='-authordate' --format='%(refname)%09%(authordate)' refs/heads | sed -e 's-refs/heads/--'
     dtag = !git tag -a release-`date +%Y%m%d%H%M`
     graph = log --graph --pretty=oneline --abbrev-commit
     # List commits in short form

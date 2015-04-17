@@ -40,7 +40,7 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correctall && setopt correct
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:./bin:./vendor/bin:$PATH
 
 # Default Aliases
 alias ack='nocorrect ack'
@@ -122,8 +122,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 # [[ -s "/Users/paul/.gvm/bin/gvm-init.sh" ]] && source "/Users/paul/.gvm/bin/gvm-init.sh"
-# export PATH=$HOME/.rbenv/bin:$PATH
-
-# eval "$(rbenv init -)"
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
 
 export PATH=/opt/chefdk/bin:$PATH

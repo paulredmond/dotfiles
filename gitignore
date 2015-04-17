@@ -2,3 +2,4 @@
 .idea/
 atlassian-ide-plugin.xml
 @database.php
+*.sublime-*
