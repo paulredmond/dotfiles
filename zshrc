@@ -1,6 +1,8 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+export EDITOR='vim'
+
 export TERM="xterm-256color"
 
 # export RBENV_VERSION=1.9.3
