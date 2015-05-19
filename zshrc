@@ -65,6 +65,9 @@ alias npm-exec='PATH=$(npm bin):$PATH'
 alias g='git'
 alias gs='git status'
 
+# http://unix.stackexchange.com/questions/22615/how-can-i-get-my-external-ip-address-in-bash/81699#81699
+alias publicip='dig +short myip.opendns.com @resolver1.opendns.com'
+
 # Local config
 if [[ -e $HOME/.zshrc.local ]]
 then
@@ -122,9 +125,12 @@ function myprocess()
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+#export GROOVY_HOME=/usr/local/opt/groovy/libexec
+
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-# [[ -s "/Users/paul/.gvm/bin/gvm-init.sh" ]] && source "/Users/paul/.gvm/bin/gvm-init.sh"
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
 export PATH=/opt/chefdk/bin:$PATH
+[[ -s "/Users/paul/.gvm/bin/gvm-init.sh" ]] && source "/Users/paul/.gvm/bin/gvm-init.sh"
+
