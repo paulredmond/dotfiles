@@ -132,5 +132,5 @@ export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
 export PATH=/opt/chefdk/bin:$PATH
-[[ -s "/Users/paul/.gvm/bin/gvm-init.sh" ]] && source "/Users/paul/.gvm/bin/gvm-init.sh"
+[[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
 
