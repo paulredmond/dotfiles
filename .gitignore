@@ -1,3 +1,4 @@
 zshrc.local
 mkmf.log
 *.swp
+bin/composer
