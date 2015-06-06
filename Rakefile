@@ -1,5 +1,11 @@
 require 'mkmf'
 
+class String
+    def red;   "\033[31m#{self}\033[0m" end
+    def green; "\033[32m#{self}\033[0m" end
+    def yellow; "\033[33m#{self}\033[0m" end
+end
+
 def get_excludes
   exclude  = %w(.git .gitignore README.md RakeFile mkmf.log)
 
@@ -25,7 +31,7 @@ task :install do
     next if item  == '.' or item == '..' or exclude.include? item or item[0] == '.'
     src  = current_dir + "/#{item}"
     dest = File.expand_path('~') + "/.#{item}"
-    File.symlink(src, dest) && puts("Symlinking #{dest} -> #{src}") unless File.symlink?(dest) || File.exists?(dest)
+    File.symlink(src, dest) && puts("Symlinking #{dest} -> #{src}".green) unless File.symlink?(dest) || File.exists?(dest).yellow
   end
 
   puts "Installation complete!"
@@ -45,12 +51,12 @@ namespace :composer do
   task :install do
     # Check if composer already available
     if composer_exists?
-      puts "Composer is already installed at #{root_dir}/bin/composer"
+      puts "Composer is already installed at #{root_dir}/bin/composer".yellow
       next
     end
 
     if !find_executable('php')
-      puts "PHP Executable not found!"
+      puts "PHP Executable not found!".red
       next
     end
 
@@ -61,26 +67,40 @@ namespace :composer do
       puts `(cd #{root_dir}/bin && #{curl} -sS https://getcomposer.org/installer | php -- --filename=composer)`
 
       if File.exists?("#{root_dir}/bin/composer")
-        puts "composer installed successfully."
+        puts "composer installed successfully.".green
       else
         puts "composer could not be installed properly with curl."
       end
     else
-      puts "`curl` not available on this system.",
-           "Using PHP directly to download and install..."
+      puts "`curl` not available on this system.".yellow,
+           "Using PHP directly to download and install...".yellow
       puts `(cd #{root_dir}/bin && php -r "readfile('https://getcomposer.org/installer');" | php)`
-      puts "Renaming composer.phar to composer"
-      puts `mv #{root_dir}/bin/composer.phar #{root_dir}/bin/composer`
+      puts "Renaming composer.phar to composer".yellow
+      puts `mv #{root_dir}/bin/composer.phar #{root_dir}/bin/composer`.yellow
     end
   end
 
   desc 'Update composer to the latest version'
   task :update do
     if !composer_exists?
-      puts "Composer is not installed yet. Run `rake composer:install`."
+      puts "Composer is not installed yet. Run `rake composer:install`.".red
+      next
     end
-    puts "Updating composer..."
+    puts "Updating composer...".green
     puts `#{composer_path} self-update 2>&1`
+  end
+
+  desc 'Install globally required installer packages'
+  task :global_packages do
+      packages = {
+          lumen_installer: { version: "~1.0", package: "laravel/lumen-installer" },
+          laravel_installer: { version: "~1.1.0", package: "laravel/installer" }
+      }
+
+      packages.each do |package_name, package|
+        puts "", "Installing #{package_name.to_s.tr('_', ' ')}".yellow, ""
+        puts `#{composer_path} global require #{package[:package]}=#{package[:version]}`
+      end
   end
 
 end
