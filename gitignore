@@ -3,3 +3,4 @@
 atlassian-ide-plugin.xml
 @database.php
 *.sublime-*
+*.swp
