@@ -1,4 +1,5 @@
-fontSize = 22
+fontSize = 16
+fontName = "Bitstream Vera Sans Mono"
 
 include = "{$include,.*}"
 exclude = "{$exclude,.git,.idea}"
