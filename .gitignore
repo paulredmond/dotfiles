@@ -2,3 +2,4 @@ zshrc.local
 mkmf.log
 *.swp
 bin/composer
+!Preferences.sublime-settings
