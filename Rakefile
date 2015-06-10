@@ -38,6 +38,21 @@ task :install do
 
 end
 
+namespace :homebrew do
+  task :setup do
+
+  end
+  task :basic do
+    basics = %w(rbenv ruby-build ack the_silver_searcher tig vim mercurial tmux)
+    basics.each do |package|
+      puts `brew install #{package}`
+    end
+  end
+  task :lamp do
+    # stub for lamp development requirements.
+  end
+end
+
 namespace :composer do
   def composer_exists?
     File.exists?(composer_path)
