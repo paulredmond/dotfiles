@@ -22,3 +22,7 @@ fileType = 'text.blade'
 
 [ *.json ]
 tabSize = 2
+
+[ *.{yaml,yml} ]
+tabSize = 2
+softTabs = true
