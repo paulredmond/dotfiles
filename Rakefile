@@ -108,8 +108,10 @@ namespace :composer do
   desc 'Install globally required installer packages'
   task :global_packages do
       packages = {
-          lumen_installer: { version: "~1.0", package: "laravel/lumen-installer" },
-          laravel_installer: { version: "~1.1.0", package: "laravel/installer" }
+          #@TODO dependencies conflicting with Laravel.
+          #lumen_installer: { version: "~1.0", package: "laravel/lumen-installer" },
+          laravel_installer: { version: "~1.1.0", package: "laravel/installer" },
+          psych: { version: "@stable", package: "psy/psysh" }
       }
 
       packages.each do |package_name, package|
