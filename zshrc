@@ -32,7 +32,7 @@ ZSH_THEME="miloshadzic"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew cap composer jira phing rails rake ruby gem ant symfony2 bundler laravel4 mercurial)
+plugins=(git brew cap composer phing rails rake ruby gem ant symfony2 bundler laravel4 mercurial)
 
 if [[ "$OSTYPE" != "darwin"* ]] ; then plugins[$(($#plugins+1))]=ssh-agent; fi
 
