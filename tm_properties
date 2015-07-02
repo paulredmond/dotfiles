@@ -47,6 +47,6 @@ tabSize = 2
 tabSize  = 2
 softTabs = true
 
-[ *.ruby, Gemfile ]
+[ *.rb, Gemfile ]
 softTabs = true
 tabSize  = 2
