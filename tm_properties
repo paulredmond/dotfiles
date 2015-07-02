@@ -1,11 +1,24 @@
-fontSize = 16
-fontName = "Bitstream Vera Sans Mono"
+# Themes I prefer "Github", "Gloom", "Twilight", "Laravel"
+# Theme setting might not be implemented yet? See https://gist.github.com/dvessel/1478685#display
+# theme = "Github"
+
+fontName = "Ubuntu Mono"
+fontSize = 18
+
+# fontName = "Bitstream Vera Sans Mono"
+# fontSize = 16
 
 include = "{$include,.*}"
 exclude = "{$exclude,.git,.idea}"
 
 softTabs = true
-tabSize = 4
+tabSize  = 4
+
+# Variables
+TM_GIT          = "/usr/bin/git"
+TM_HG           = "/usr/local/bin/hg"
+TM_FULLNAME     = "Paul Redmond"
+TM_ORGANIZATION = "github.com/paulredmond"
 
 [ source ]
 tabSize = 4
@@ -13,6 +26,13 @@ tabSize = 4
 [ * ]
 softTabs = true
 tabSize  = 4
+
+[ .git/COMMIT_EDITMSG ]
+spellChecking    = true
+spellingLanguage = 'en'
+
+[ *.{icns,ico,jpg,jpeg,m4v,nib,pdf,png,psd,pyc,rtf,tif,tiff,xib} ]
+binary = true
 
 [ *.php ]
 softTabs = true
@@ -24,5 +44,9 @@ fileType = 'text.blade'
 tabSize = 2
 
 [ *.{yaml,yml} ]
-tabSize = 2
+tabSize  = 2
 softTabs = true
+
+[ *.ruby, Gemfile ]
+softTabs = true
+tabSize  = 2
