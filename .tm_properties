@@ -1,0 +1,8 @@
+# Special rules for this .dotfiles repo that don't
+# fit into the global config scope
+
+[ gitconfig ]
+fileType = 'source.git-config'
+
+[ zshrc ]
+fileType = 'source.shell'
