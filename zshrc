@@ -34,7 +34,7 @@ ZSH_THEME="miloshadzic"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git brew cap composer phing rails rake ruby gem ant symfony2 bundler laravel4 mercurial)
 
-if [[ "$OSTYPE" != "darwin"* ]] ; then plugins[$(($#plugins+1))]=ssh-agent; fi
+#if [[ "$OSTYPE" != "darwin"* ]] ; then plugins[$(($#plugins+1))]=ssh-agent; fi
 
 source $ZSH/oh-my-zsh.sh
 
