@@ -1,3 +1,7 @@
 # The following aliases rely on xclip - `sudo apt-get install xclip`
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+
+if type "xdg-open" &> /dev/null; then
+    alias open="xdg-open"
+fi
