@@ -32,7 +32,7 @@ ZSH_THEME="miloshadzic"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew cap composer phing rails rake ruby gem ant symfony2 bundler laravel4 mercurial)
+plugins=(git mercurial brew cap composer phing rails rake ruby gem ant symfony2 bundler)
 
 #if [[ "$OSTYPE" != "darwin"* ]] ; then plugins[$(($#plugins+1))]=ssh-agent; fi
 
@@ -56,7 +56,7 @@ alias mongod='nocorrect mongod'
 alias rake='noglob rake'
 alias mate='nocorrect mate'
 alias p='nocorrect pstorm'
-alias npm='nocorrect npm'
+#alias npm='nocorrect npm'
 alias rspec='nocorrect rspec '
 alias ....='cd ../../..'
 alias lsh='ls -lah'
@@ -138,3 +138,9 @@ eval "$(rbenv init -)"
 export PATH=/opt/chefdk/bin:$PATH
 [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
 
+# Mercurial Prompt support using the oh-my-zsh mercurial plugin
+PROMPT='%{$fg[cyan]%}%1~%{$reset_color%}%{$fg[red]%}|%{$reset_color%}$(git_prompt_info)$(hg_prompt_info)%{$fg[cyan]%}⇒%{$reset_color%} '
+ZSH_THEME_HG_PROMPT_PREFIX="%{$fg_bold[magenta]%}hg:(%{$fg[red]%}"
+ZSH_THEME_HG_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_HG_PROMPT_DIRTY="%{$fg[magenta]%}) %{$fg[yellow]%}✗%{$reset_color%}"
+ZSH_THEME_HG_PROMPT_CLEAN="%{$fg[magenta]%})"

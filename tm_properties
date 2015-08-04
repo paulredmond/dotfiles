@@ -2,11 +2,11 @@
 # Theme setting might not be implemented yet? See https://gist.github.com/dvessel/1478685#display
 # theme = "Github"
 
-fontName = "Ubuntu Mono"
-fontSize = 18
+#fontName = "Ubuntu Mono"
+#fontSize = 18
 
-# fontName = "Bitstream Vera Sans Mono"
-# fontSize = 16
+fontName = "Bitstream Vera Sans Mono"
+fontSize = 16
 
 include = "{$include,.*}"
 exclude = "{$exclude,.git,.idea}"
