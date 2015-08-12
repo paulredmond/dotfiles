@@ -111,7 +111,8 @@ namespace :composer do
           #@TODO dependencies conflicting with Laravel.
           #lumen_installer: { version: "~1.0", package: "laravel/lumen-installer" },
           laravel_installer: { version: "~1.1.0", package: "laravel/installer" },
-          psych: { version: "@stable", package: "psy/psysh" }
+          psych: { version: "@stable", package: "psy/psysh" },
+          phpcs: { version: "@stable", package: "squizlabs/php_codesniffer" }
       }
 
       packages.each do |package_name, package|
