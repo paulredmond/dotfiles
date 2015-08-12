@@ -42,7 +42,7 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correctall && setopt correct
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:./bin:./vendor/bin:$HOME/bin:$HOME/.dotfiles/bin:$PATH
+# export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:./bin:./vendor/bin:$HOME/bin:$HOME/.dotfiles/bin:$PATH
 
 # zsh completion for docker-composer
 fpath=(~/.dotfiles/.zsh/completion $fpath)

@@ -6,3 +6,6 @@ fileType = 'source.git-config'
 
 [ zshrc ]
 fileType = 'source.shell'
+
+[ zshenv ]
+fileType = 'source.shell'
