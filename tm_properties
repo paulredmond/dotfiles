@@ -5,7 +5,7 @@
 #fontName = "Ubuntu Mono"
 #fontSize = 18
 
-fontName = "Bitstream Vera Sans Mono"
+fontName = "Hack"
 fontSize = 16
 
 include = "{$include,.*}"
