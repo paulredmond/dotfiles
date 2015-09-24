@@ -145,4 +145,6 @@ ZSH_THEME_HG_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_HG_PROMPT_DIRTY="%{$fg[magenta]%}) %{$fg[yellow]%}✗%{$reset_color%}"
 ZSH_THEME_HG_PROMPT_CLEAN="%{$fg[magenta]%})"
 
-#eval "$(docker-machine env default)"
+if hash docker-machine 2>/dev/null; then
+    eval "$(docker-machine env default)"
+fi
