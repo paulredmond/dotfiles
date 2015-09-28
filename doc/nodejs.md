@@ -22,3 +22,15 @@ npm list -g --depth=0
 ├── pm2@0.14.7
 └── underscore-cli@0.2.18
 ```
+
+# Output modules
+
+```
+npm list -g --depth=0 | awk '{print $2}'
+```
+
+# Install Command
+
+```
+npm install -g babel bower browser-sync browserify dependency-check express-generator grunt-cli gulp jscs jshint karma karma-browserify less moch npm-dview pioneer pm2 underscore-cli
+```
