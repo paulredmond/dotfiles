@@ -44,7 +44,7 @@ unsetopt correctall && setopt correct
 # Customize to your needs...
 # export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:./bin:./vendor/bin:$HOME/bin:$HOME/.dotfiles/bin:$PATH
 
-# zsh completion for docker-composer
+# zsh completion for docker-compose
 fpath=(~/.dotfiles/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
 
@@ -129,22 +129,12 @@ function myprocess()
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-#export GROOVY_HOME=/usr/local/opt/groovy/libexec
-
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
-
-export PATH=/opt/chefdk/bin:$PATH
-[[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
-
-# Mercurial Prompt support using the oh-my-zsh mercurial plugin
-PROMPT='%{$fg[cyan]%}%1~%{$reset_color%}%{$fg[red]%}|%{$reset_color%}$(git_prompt_info)$(hg_prompt_info)%{$fg[cyan]%}⇒%{$reset_color%} '
-ZSH_THEME_HG_PROMPT_PREFIX="%{$fg_bold[magenta]%}hg:(%{$fg[red]%}"
-ZSH_THEME_HG_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_HG_PROMPT_DIRTY="%{$fg[magenta]%}) %{$fg[yellow]%}✗%{$reset_color%}"
-ZSH_THEME_HG_PROMPT_CLEAN="%{$fg[magenta]%})"
 
 if hash docker-machine 2>/dev/null; then
     eval "$(docker-machine env default)"
 fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
