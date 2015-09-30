@@ -2,6 +2,8 @@
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
+cdpath=($HOME/src $HOME/Code)
+
 if type "xdg-open" &> /dev/null; then
     alias open="xdg-open"
 fi
