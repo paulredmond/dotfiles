@@ -32,7 +32,7 @@ ZSH_THEME="miloshadzic"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew cap composer phing rails rake ruby gem ant symfony2 bundler)
+plugins=(git brew cap composer phing rails rake ruby gem ant symfony2 bundler docker docker-compose)
 
 #if [[ "$OSTYPE" != "darwin"* ]] ; then plugins[$(($#plugins+1))]=ssh-agent; fi
 
@@ -68,6 +68,11 @@ alias npm-exec='PATH=$(npm bin):$PATH'
 # Git aliases
 alias g='git'
 alias gs='git status'
+
+# Docker aliases
+alias d='docker'
+alias dc='docker-compose'
+alias dm='docker-machine'
 
 # http://unix.stackexchange.com/questions/22615/how-can-i-get-my-external-ip-address-in-bash/81699#81699
 alias publicip='dig +short myip.opendns.com @resolver1.opendns.com'
@@ -138,3 +143,4 @@ fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
