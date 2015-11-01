@@ -9,7 +9,6 @@ gsettings reset com.canonical.desktop.interface scrollbar-mode
 ```
 
 ## Apt
-
 ```
 # Get package versions
 apt-cache madison nodejs

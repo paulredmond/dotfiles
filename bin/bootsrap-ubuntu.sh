@@ -14,6 +14,9 @@ sudo apt-get install -y \
 	libreadline-dev
 
 sudo add-apt-repository -y ppa:ondrej/php5-5.6
+sudo apt-add-repository -y ppa:webupd8team/java
+
+sudo apt-get update -y
 
 # Tools
 sudo apt-get install -y \
@@ -34,7 +37,8 @@ sudo apt-get install -y \
 	php5-mongo \
 	php5-memcached \
 	php5-xdebug \
-	mysql-client
+	mysql-client \
+	oracle-java8-installer
 
 # Docker
 sudo apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
