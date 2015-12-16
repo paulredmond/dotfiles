@@ -4,3 +4,5 @@ atlassian-ide-plugin.xml
 @database.php
 *.sublime-*
 *.swp
+npm-debug.log
+auth.json

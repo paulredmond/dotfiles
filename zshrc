@@ -110,7 +110,7 @@ function prfetch()
 function prmerge()
 {
     git checkout $1
-    git merge --no-ff -m "Merged pull request #$2" pr/$2
+    git merge --no-ff -m "Merge pull request #$2" pr/$2
     git branch -D pr/$2
     git push
 }
@@ -144,3 +144,6 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+
+# added by travis gem
+[ -f /Users/paul/.travis/travis.sh ] && source /Users/paul/.travis/travis.sh

@@ -5,8 +5,12 @@
 #fontName = "Ubuntu Mono"
 #fontSize = 18
 
+# windowTitle = "$TM_DISPLAYNAME – $TM_DIRECTORY"
+windowTitle = "$TM_DISPLAYNAME${TM_DIRECTORY/\A(?:\/Users\/paul\/Code\/(?:work\/)?(?!\b(?:communication|programming|reference)\b)\w+\/?(.*)|(.+))\z/${2:? – ${2/\/Users\/paul\/Code/~/}:${1/\A(?=.)/ – /}}/}"
+
+
 fontName = "Hack"
-fontSize = 16
+fontSize = 17
 
 include = "{$include,.*}"
 exclude = "{$exclude,.git,.idea}"
@@ -26,6 +30,7 @@ tabSize = 4
 [ * ]
 softTabs = true
 tabSize  = 4
+spellChecking = true
 
 [ .git/COMMIT_EDITMSG ]
 spellChecking    = true

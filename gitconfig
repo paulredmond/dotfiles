@@ -2,7 +2,7 @@
     name = Paul Redmond
     email = paulrredmond@gmail.com
 [core]
-    excludesfile = ~/.gitignore 
+    excludesfile = ~/.gitignore
     editor = vim
     autocrlf = input
     ignorecase = false
@@ -58,7 +58,10 @@
     default = simple
 [credential]
 	helper = osxkeychain
-[url "https://github.com"]
-    insteadOf = git://github.com
-[url "https://"]
-    insteadOf = git://
+#[url "https://github.com"]
+#    insteadOf = git://github.com
+# [url "https://"]
+
+    #insteadOf = git://
+[rerere]
+	enabled = true
