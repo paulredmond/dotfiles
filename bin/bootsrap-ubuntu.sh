@@ -15,7 +15,7 @@ sudo apt-get install -y \
 
 sudo add-apt-repository -y ppa:ondrej/php5-5.6
 sudo apt-add-repository -y ppa:webupd8team/java
-
+sudo apt-add-repository -y ppa:git-core/ppa
 sudo apt-get update -y
 
 # Tools
