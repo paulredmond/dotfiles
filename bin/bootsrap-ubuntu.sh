@@ -23,7 +23,8 @@ sudo apt-get install -y \
 	xbacklight \
 	silversearcher-ag \
 	ack-grep \
-	xclip
+	xclip \
+	keychain
 
 # Dev
 sudo apt-get install -y \
