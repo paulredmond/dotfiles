@@ -61,6 +61,34 @@ eval "$(rbenv init -)"
 rbenv install 2.2.3
 rbenv global 2.2.3
 
+# NVM
+git clone https://github.com/creationix/nvm.git ~/.nvm \
+&& cd ~/.nvm \
+&& git checkout `git describe --abbrev=0 --tags`
+. ~/.nvm/nvm.sh
+nvm install node
+npm install -g \
+ babel \
+ bower \
+ browser-sync \
+ browserify \
+ dependency-check \
+ express-generator \
+ grunt-cli \
+ gulp \
+ jscs \
+ jshint \
+ karma \
+ karma-browserify \
+ less \
+ mocha \
+ pioneer \
+ pm2 \
+ underscore-cli
+
+# Paths
+mkdir -p $HOME/Code/Sandbox $HOME/bin
+
 # Fonts
 mkdir -p $HOME/.fonts
 (cd $HOME/.dotfiles \
