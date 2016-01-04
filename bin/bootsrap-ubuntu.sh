@@ -15,7 +15,7 @@ sudo apt-get install -y \
 
 sudo add-apt-repository -y ppa:ondrej/php5-5.6
 sudo apt-add-repository -y ppa:webupd8team/java
-
+sudo apt-add-repository -y ppa:git-core/ppa
 sudo apt-get update -y
 
 # Tools
@@ -23,7 +23,8 @@ sudo apt-get install -y \
 	xbacklight \
 	silversearcher-ag \
 	ack-grep \
-	xclip
+	xclip \
+	keychain
 
 # Dev
 sudo apt-get install -y \
@@ -39,6 +40,13 @@ sudo apt-get install -y \
 	php5-xdebug \
 	mysql-client \
 	oracle-java8-installer
+
+# MariaDB
+sudo apt-get install software-properties-common
+sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
+sudo add-apt-repository 'deb [arch=amd64,i386] http://sfo1.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu trusty main'
+sudo apt-get update
+sudo apt-get install mariadb-server
 
 # Docker
 sudo apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
@@ -60,6 +68,34 @@ PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 rbenv install 2.2.3
 rbenv global 2.2.3
+
+# NVM
+git clone https://github.com/creationix/nvm.git ~/.nvm \
+&& cd ~/.nvm \
+&& git checkout `git describe --abbrev=0 --tags`
+. ~/.nvm/nvm.sh
+nvm install node
+npm install -g \
+ babel \
+ bower \
+ browser-sync \
+ browserify \
+ dependency-check \
+ express-generator \
+ grunt-cli \
+ gulp \
+ jscs \
+ jshint \
+ karma \
+ karma-browserify \
+ less \
+ mocha \
+ pioneer \
+ pm2 \
+ underscore-cli
+
+# Paths
+mkdir -p $HOME/Code/Sandbox $HOME/bin
 
 # Fonts
 mkdir -p $HOME/.fonts
