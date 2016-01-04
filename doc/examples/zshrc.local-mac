@@ -8,3 +8,6 @@ if [[ "$OSTYPE" =~ "darwin" ]] ; then
     source /opt/boxen/env.sh;
     export TM_RUBY=$RBENV_ROOT/shims/ruby
 fi
+
+# Aliases
+alias octal="stat -f '%A %a %N'"
