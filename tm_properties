@@ -52,9 +52,15 @@ tabSize = 2
 tabSize  = 2
 softTabs = true
 
-[ *.rb, Gemfile ]
+[ *.rb ]
 softTabs = true
 tabSize  = 2
 
-[ .zshrc, .zshrc.local ]
+[ Gemfile ]
+tabSize = 2
+
+[ .zshrc ]
+fileType = 'source.shell'
+
+[ .zshrc.local ]
 fileType = 'source.shell'

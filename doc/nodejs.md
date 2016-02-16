@@ -20,7 +20,8 @@ npm list -g --depth=0
 ├── npm-dview@1.1.2
 ├── pioneer@0.11.6
 ├── pm2@0.14.7
-└── underscore-cli@0.2.18
+├── underscore-cli@0.2.18
+└── diff-so-fancy@0.4.0
 ```
 
 # Output modules
