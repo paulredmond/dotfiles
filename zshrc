@@ -61,6 +61,7 @@ alias rspec='nocorrect rspec '
 alias ....='cd ../../..'
 alias lsh='ls -lah'
 alias console='nocorrect console'
+alias editZsh="$EDITOR ~/.zshrc"
 
 # NPM
 alias npm-exec='PATH=$(npm bin):$PATH'
