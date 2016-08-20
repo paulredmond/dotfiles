@@ -137,9 +137,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
-if hash docker-machine 2>/dev/null; then
-    eval "$(docker-machine env default)"
-fi
+#if hash docker-machine 2>/dev/null; then
+#    eval "$(docker-machine env default)"
+#fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
