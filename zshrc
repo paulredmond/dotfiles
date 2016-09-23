@@ -37,7 +37,6 @@ bindkey "[D" backward-word
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git brew cap composer phing rails rake ruby gem symfony2 bundler docker docker-compose laravel5)
 
-if [[ "$OSTYPE" != "darwin"* ]] ; then plugins[$(($#plugins+1))]=ssh-agent; fi
 
 source $ZSH/oh-my-zsh.sh
 
