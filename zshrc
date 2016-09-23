@@ -17,6 +17,9 @@ ZSH_THEME="miloshadzic"
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
+bindkey "[C" forward-word
+bindkey "[D" backward-word
+
 # Comment this out to disable weekly auto-update checks
 # DISABLE_AUTO_UPDATE="true"
 
@@ -32,7 +35,7 @@ ZSH_THEME="miloshadzic"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew cap composer phing rails rake ruby gem ant symfony2 bundler docker docker-compose)
+plugins=(git brew cap composer phing rails rake ruby gem symfony2 bundler docker docker-compose laravel5)
 
 if [[ "$OSTYPE" != "darwin"* ]] ; then plugins[$(($#plugins+1))]=ssh-agent; fi
 
@@ -62,6 +65,10 @@ alias ....='cd ../../..'
 alias lsh='ls -lah'
 alias console='nocorrect console'
 alias editZsh="$EDITOR ~/.zshrc"
+
+# PHP
+alias art='php artisan'
+alias tinker='php artisan tinker'
 
 # NPM
 alias npm-exec='PATH=$(npm bin):$PATH'
@@ -138,9 +145,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
-if hash docker-machine 2>/dev/null; then
-    eval "$(docker-machine env default)"
-fi
+#if hash docker-machine 2>/dev/null; then
+#    eval "$(docker-machine env default)"
+#fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

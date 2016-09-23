@@ -8,6 +8,7 @@
 # windowTitle = "$TM_DISPLAYNAME – $TM_DIRECTORY"
 windowTitle = "$TM_DISPLAYNAME${TM_DIRECTORY/\A(?:\/Users\/paul\/Code\/(?:work\/)?(?!\b(?:communication|programming|reference)\b)\w+\/?(.*)|(.+))\z/${2:? – ${2/\/Users\/paul\/Code/~/}:${1/\A(?=.)/ – /}}/}"
 
+excludeInFolderSearch = "{$excludeInFolderSearch,$extraExcludes,node_modules}"
 
 fontName = "Hack"
 fontSize = 17
