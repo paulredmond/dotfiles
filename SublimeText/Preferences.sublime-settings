@@ -1,17 +1,69 @@
 {
-    "color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
-    "font_face": "Ubuntu Mono",
-    "font_size": 16,
+    "added_words":
+    [
+        "Laravel",
+        "mkdir",
+        "github",
+        "https",
+        "laravel",
+        "Ubuntu",
+        "ubuntu",
+        "Homebrew",
+        "mysql",
+        "Zend",
+        "webserver",
+        "Debian",
+        "Middleware",
+        "Hostname",
+        "refactored",
+        "namespace",
+        "refactor",
+        "serializer",
+        "validator",
+        "workflow"
+    ],
+    "always_show_minimap_viewport": false,
+    "auto_indent": true,
+    "caret_style": "smooth",
+    "color_scheme": "Packages/duotones-sublime-colorschemes/base16-duotone-dark.dark.tmTheme",
+    "draw_white_space": true,
+    "ensure_newline_at_eof_on_save": true,
+    "folder_exclude_patterns":
+    [
+        ".idea"
+    ],
+    "font_face": "Hack",
+    "font_size": 17,
     "ignored_packages":
     [
         "Vintage"
     ],
-    "theme": "Material-Theme.sublime-theme",
-    "caret_style": "phase",
-    "highlight_line": true,
-    "line_padding_bottom": 3,
-    "line_padding_top": 3,
-    "fade_fold_buttons": false,
-    "bold_folder_labels": true,
+    "ignored_words":
+    [
+        "Bookr",
+        "Eloqent",
+        "Homebrew's",
+        "Laracasts",
+        "Webtatic",
+        "Xcode",
+        "balrog",
+        "bookr",
+        "cd",
+        "homebrew",
+        "hostname",
+        "middleware",
+        "namespacing",
+        "numbers=off",
+        "php",
+        "phpunit",
+        "vagrant@homestead",
+        "yaml"
+    ],
+    "line_padding_bottom": 6,
+    "line_padding_top": 6,
+    "smart_indent": true,
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true,
+    "trim_automatic_white_space": true,
     "word_wrap": true
 }
