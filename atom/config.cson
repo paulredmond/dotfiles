@@ -1,0 +1,37 @@
+"*":
+  core:
+    telemetryConsent: "no"
+    themes: [
+      "one-light-ui"
+      "one-light-syntax"
+    ]
+  editor:
+    fontFamily: "Hack"
+    invisibles: {}
+    lineHeight: 1.75
+    showIndentGuide: true
+    softWrap: true
+    tabLength: 4
+    tabType: "soft"
+  "one-dark-ui": {}
+  "one-light-ui": {}
+  "php-integrator-autocomplete-plus":
+    disableBuiltinAutocompletion: false
+  "php-integrator-base":
+    composerCommand: "/Users/paul/.dotfiles/bin/composer"
+    phpCommand: "/usr/local/bin/php"
+  welcome:
+    showOnStartup: false
+".blade.html.php.text":
+  editor:
+    commentEnd: " --}}"
+    commentStart: "{{-- "
+    tabLength: 4
+".js.source":
+  editor:
+    tabLength: 2
+    tabType: "soft"
+".source.yaml":
+  editor:
+    tabLength: 2
+    tabType: "soft"
