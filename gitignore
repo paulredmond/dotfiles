@@ -5,4 +5,3 @@ atlassian-ide-plugin.xml
 *.sublime-*
 *.swp
 npm-debug.log
-auth.json
