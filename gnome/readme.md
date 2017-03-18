@@ -1,5 +1,7 @@
 # Importing a Terminal Profile in Ubuntu 16
 
+See this Stack Overflow answer for details: http://askubuntu.com/a/874073/329923
+
 List contents and profiles:
 
 ```
