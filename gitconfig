@@ -1,6 +1,6 @@
 [user]
-    name = Paul Redmond
-    email = paulrredmond@gmail.com
+	name = Paul Redmond
+	email = paulrredmond@gmail.com
 [core]
     excludesfile = ~/.gitignore
     editor = vim
@@ -64,5 +64,3 @@
 # [url "https://"]
 
     #insteadOf = git://
-[rerere]
-	enabled = true

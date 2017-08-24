@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-export EDITOR='vim'
+export EDITOR='subl -n -w'
 
 export TERM="xterm-256color"
 
@@ -66,6 +66,7 @@ alias console='nocorrect console'
 alias editZsh="$EDITOR ~/.zshrc"
 
 # PHP
+alias iphp='psysh'
 alias art='php artisan'
 alias tinker='php artisan tinker'
 
@@ -164,3 +165,5 @@ export LC_MONETARY="en_US.UTF-8"
 export LC_NUMERIC="en_US.UTF-8"
 export LC_TIME="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
+
+export PATH="$HOME/.yarn/bin:$PATH"
