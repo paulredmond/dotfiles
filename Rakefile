@@ -109,8 +109,8 @@ namespace :composer do
   task :global_packages do
       packages = {
           #@TODO dependencies conflicting with Laravel.
-          #lumen_installer: { version: "~1.0", package: "laravel/lumen-installer" },
-          laravel_installer: { version: "~1.1.0", package: "laravel/installer" },
+          laravel_installer: { version: "@stable", package: "laravel/installer" },
+          lumen_installer: { version: "@stable", package: "laravel/lumen-installer" },
           psych: { version: "@stable", package: "psy/psysh" },
           phpcs: { version: "@stable", package: "squizlabs/php_codesniffer" }
       }

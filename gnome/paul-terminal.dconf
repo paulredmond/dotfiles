@@ -1,0 +1,16 @@
+[/]
+foreground-color='rgb(196,197,181)'
+visible-name='Paul'
+palette=['rgb(26,26,26)', 'rgb(244,0,95)', 'rgb(152,224,36)', 'rgb(250,132,25)', 'rgb(157,101,255)', 'rgb(244,0,95)', 'rgb(88,209,235)', 'rgb(196,197,181)', 'rgb(0,43,54)', 'rgb(244,0,95)', 'rgb(152,224,36)', 'rgb(224,213,97)', 'rgb(157,101,255)', 'rgb(244,0,95)', 'rgb(88,209,235)', 'rgb(246,246,239)']
+default-size-columns=100
+default-size-rows=30
+cursor-shape='block'
+use-system-font=false
+use-theme-colors=false
+use-transparent-background=false
+font='Ubuntu Mono 14'
+use-theme-transparency=false
+bold-color-same-as-fg=false
+bold-color='rgb(196,197,181)'
+background-color='rgb(26,26,26)'
+background-transparency-percent=5

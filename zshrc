@@ -150,8 +150,7 @@ eval "$(rbenv init -)"
 #fi
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
 # added by travis gem
 [ -f /Users/paul/.travis/travis.sh ] && source /Users/paul/.travis/travis.sh
