@@ -5,3 +5,4 @@ atlassian-ide-plugin.xml
 *.sublime-*
 *.swp
 npm-debug.log
+/.vscode

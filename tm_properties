@@ -10,8 +10,8 @@ windowTitle = "$TM_DISPLAYNAME${TM_DIRECTORY/\A(?:\/Users\/paul\/Code\/(?:work\/
 
 excludeInFolderSearch = "{$excludeInFolderSearch,$extraExcludes,node_modules}"
 
-fontName = "Hack"
-fontSize = 17
+fontName = "OperatorMono-Book"
+fontSize = 16
 
 include = "{$include,.*}"
 exclude = "{$exclude,.git,.idea}"
@@ -46,7 +46,7 @@ softTabs = true
 [ *.blade.php ]
 fileType = 'text.blade'
 
-[ *.json ]
+[ *.{json,scss,css,vue,html} ]
 tabSize = 2
 
 [ *.{yaml,yml} ]
