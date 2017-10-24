@@ -27,11 +27,20 @@ desc 'Install dotfiles'
 task :install do
 
   current_dir = File.dirname(__FILE__)
+  home = File.expand_path('~')
   Dir.foreach(current_dir) do |item|
     next if item  == '.' or item == '..' or exclude.include? item or item[0] == '.'
     src  = current_dir + "/#{item}"
-    dest = File.expand_path('~') + "/.#{item}"
+    dest = home + "/.#{item}"
     File.symlink(src, dest) && puts("Symlinking #{dest} -> #{src}") unless File.symlink?(dest) || File.exists?(dest)
+  end
+
+  # Create an empty .zshrc.local
+  if ! File.exists?(home + '/.zshrc.local')
+    puts "Adding an empty .zshrc.local file for local modifications"
+    local_zsh = File.new(home + '/.zshrc.local', "w")
+    local_zsh.puts("# Local modifications")
+    local_zsh.close
   end
 
   puts "Installation complete!"
