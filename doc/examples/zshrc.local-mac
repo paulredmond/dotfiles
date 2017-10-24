@@ -2,12 +2,7 @@
 # add to cdpath
 # cdpath=( ~ ~/path-two)
 
-export EDITOR='mate -w'
-
-if [[ "$OSTYPE" =~ "darwin" ]] ; then
-    source /opt/boxen/env.sh;
-    export TM_RUBY=$RBENV_ROOT/shims/ruby
-fi
+export EDITOR='subl -w'
 
 # Aliases
 alias octal="stat -f '%A %a %N'"
