@@ -7,7 +7,7 @@ class String
 end
 
 def get_excludes
-  exclude  = %w(.git .gitignore README.md RakeFile mkmf.log)
+  exclude  = %w(.git .gitignore README.md Rakefile mkmf.log SublimeText iterm gnome Fonts doc bin)
 
   if (File.exists?('.gitignore'))
     File.open('.gitignore', 'r').each_line do |line|
