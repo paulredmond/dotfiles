@@ -1,4 +1,13 @@
-# My List of Globally Installed Modules
+## Global modules
+
+```
+yarn global add \
+    vue-cli \
+    create-react-app \
+    mocha \
+    gulp
+```
+## My List of Globally Installed Modules (old)
 
 ```
 npm list -g --depth=0
