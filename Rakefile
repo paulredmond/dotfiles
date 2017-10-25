@@ -121,7 +121,8 @@ namespace :composer do
           laravel_installer: { version: "@stable", package: "laravel/installer" },
           lumen_installer: { version: "@stable", package: "laravel/lumen-installer" },
           psych: { version: "@stable", package: "psy/psysh" },
-          phpcs: { version: "@stable", package: "squizlabs/php_codesniffer" }
+          phpcs: { version: "@stable", package: "squizlabs/php_codesniffer" },
+          valet: { version: "@stable", package: "laravel/valet" },
       }
 
       packages.each do |package_name, package|
