@@ -2,3 +2,4 @@
 --type-set=smarty=.tpl
 --type-set=cakeview=.ctp,.thtml
 --type-set=markdown=.md,.markdown
+--type-set=blade:match:.blade.php$
