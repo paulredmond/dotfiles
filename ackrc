@@ -1,5 +1,13 @@
---type-add=ruby=.haml,.rake,.rsel
---type-set=smarty=.tpl
---type-set=cakeview=.ctp,.thtml
---type-set=markdown=.md,.markdown
+# Always use color
+--color
+
+# Ignore Directories
+--ignore-dir=.idea/
+--ignore-dir=node_modules/
+
+# Add types
+--type-add=ruby:ext:haml,rake,rsel
+--type-set=cakeview:ext:ctp,thtml
+--type-set=markdown:ext:md,markdown
+--type-set=json:ext:json
 --type-set=blade:match:.blade.php$
