@@ -122,6 +122,7 @@ namespace :composer do
           lumen_installer: { version: "@stable", package: "laravel/lumen-installer" },
           psych: { version: "@stable", package: "psy/psysh" },
           phpcs: { version: "@stable", package: "squizlabs/php_codesniffer" },
+          phpcs_fixer: { version: "@stable", package: "friendsofphp/php-cs-fixer" },
           valet: { version: "@stable", package: "laravel/valet" },
       }
 
