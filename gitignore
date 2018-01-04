@@ -6,4 +6,4 @@ atlassian-ide-plugin.xml
 *.swp
 npm-debug.log
 /.vscode
-scratch.md
+/scratch.md
