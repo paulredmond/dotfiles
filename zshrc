@@ -76,6 +76,7 @@ alias npm-exec='PATH=$(npm bin):$PATH'
 # Git aliases
 alias g='git'
 alias gs='git status'
+alias wip='git commit -am "WIP"'
 
 # Docker aliases
 alias d='docker'
