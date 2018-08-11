@@ -82,6 +82,7 @@ alias wip='git commit -am "WIP"'
 alias d='docker'
 alias dc='docker-compose'
 alias dm='docker-machine'
+alias dmnative='echo "Switching to native docker" && eval $(docker-machine env -u)'
 
 # http://unix.stackexchange.com/questions/22615/how-can-i-get-my-external-ip-address-in-bash/81699#81699
 alias publicip='dig +short myip.opendns.com @resolver1.opendns.com'
