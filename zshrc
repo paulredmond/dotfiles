@@ -63,7 +63,7 @@ alias rspec='nocorrect rspec '
 alias ....='cd ../../..'
 alias lsh='ls -lah'
 alias console='nocorrect console'
-alias editZsh="$EDITOR ~/.zshrc"
+alias zshrc="$EDITOR ~/.zshrc"
 
 # PHP
 alias iphp='psysh'
