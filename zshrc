@@ -69,6 +69,7 @@ alias zshrc="$EDITOR ~/.zshrc"
 alias iphp='psysh'
 alias art='php artisan'
 alias tinker='php artisan tinker'
+alias mfs='php artisan migrate:fresh --seed'
 
 # NPM
 alias npm-exec='PATH=$(npm bin):$PATH'
