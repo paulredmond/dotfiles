@@ -142,6 +142,16 @@ function myprocess()
     ps -ef | grep $USER
 }
 
+function corscheck()
+{
+    curl -I \
+      -H "Origin: http://example.com" \
+      -H "Access-Control-Request-Method: POST" \
+      -H "Access-Control-Request-Headers: X-Requested-With" \
+      -X OPTIONS \
+      $1
+}
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
@@ -153,7 +163,8 @@ eval "$(rbenv init -)"
 #fi
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # added by travis gem
 [ -f /Users/paul/.travis/travis.sh ] && source /Users/paul/.travis/travis.sh
