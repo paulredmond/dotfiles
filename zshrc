@@ -70,6 +70,7 @@ alias iphp='psysh'
 alias art='php artisan'
 alias tinker='php artisan tinker'
 alias mfs='php artisan migrate:fresh --seed'
+alias t='phpunit'
 
 # NPM
 alias npm-exec='PATH=$(npm bin):$PATH'
