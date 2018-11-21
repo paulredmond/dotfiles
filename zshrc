@@ -74,6 +74,8 @@ alias t='phpunit'
 
 # NPM
 alias npm-exec='PATH=$(npm bin):$PATH'
+alias yi='yarn install'
+alias yw='yarn install && yarn run watch'
 
 # Git aliases
 alias g='git'
