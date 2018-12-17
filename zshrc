@@ -61,7 +61,7 @@ alias p='nocorrect pstorm'
 #alias npm='nocorrect npm'
 alias rspec='nocorrect rspec '
 alias ....='cd ../../..'
-alias lsh='ls -lah'
+alias lah='ls -lah'
 alias console='nocorrect console'
 alias zshrc="$EDITOR ~/.zshrc"
 
