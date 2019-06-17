@@ -2,7 +2,8 @@
 .idea/
 atlassian-ide-plugin.xml
 @database.php
-*.sublime-*
+*.sublime-project
+*.sublime-workspace
 *.swp
 npm-debug.log
 /.vscode
