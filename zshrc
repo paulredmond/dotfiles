@@ -1,3 +1,8 @@
+# Uncomment to profile zsh startup
+# See the bottom of the file
+# @see https://blog.askesis.pl/post/2017/04/how-to-debug-zsh-startup-time.html
+# zmodload zsh/zprof
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -165,9 +170,9 @@ eval "$(rbenv init -)"
 #    eval "$(docker-machine env default)"
 #fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # added by travis gem
 [ -f /Users/paul/.travis/travis.sh ] && source /Users/paul/.travis/travis.sh
@@ -183,4 +188,8 @@ export LC_TIME="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
 export PATH="$HOME/.yarn/bin:$PATH"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Uncomment to profile zsh startup
+# See the top of the file
+# @see https://blog.askesis.pl/post/2017/04/how-to-debug-zsh-startup-time.html
+# zprof
