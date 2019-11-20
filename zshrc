@@ -163,9 +163,6 @@ function corscheck()
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-export PATH=$HOME/.rbenv/bin:$PATH
-eval "$(rbenv init -)"
-
 #if hash docker-machine 2>/dev/null; then
 #    eval "$(docker-machine env default)"
 #fi
@@ -198,3 +195,6 @@ export PATH="$HOME/.yarn/bin:$PATH"
 # Fast node manager
 # @see https://github.com/Schniz/fnm
 eval "$(fnm env --multi)"
+
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
