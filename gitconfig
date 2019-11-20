@@ -3,9 +3,11 @@
 	email = paulrredmond@gmail.com
 [core]
     excludesfile = ~/.gitignore
-    editor = vim
+    editor = subl -n -w
     autocrlf = input
     ignorecase = false
+[commit]
+    template = ~/.gitmessage
 [color]
     ui = true
     diff = auto
