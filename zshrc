@@ -198,3 +198,4 @@ export PATH="$HOME/.yarn/bin:$PATH"
 # Fast node manager
 # @see https://github.com/Schniz/fnm
 eval "$(fnm env --multi)"
+export PATH="/usr/local/sbin:$PATH"
