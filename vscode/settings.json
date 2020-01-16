@@ -18,7 +18,6 @@
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.lineHeight": 1.5,
     "terminal.integrated.cursorBlinking": false,
-
     "workbench.startupEditor": "none",
     "editor.renderControlCharacters": false,
     "editor.renderIndentGuides": false,
@@ -38,15 +37,17 @@
     "terminal.integrated.cursorStyle": "line",
     "editor.fontLigatures": false,
     "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "workbench.colorTheme": "Darkula",
     "workbench.colorCustomizations": {
-        "editor.background": "#232525",
-        "sideBar.background": "#3c3f41"
+        "[Darkula]": {
+            "editor.background": "#232525",
+            "sideBar.background": "#3c3f41"
+        }
     },
     "editor.tokenColorCustomizations": {
         "[Darkula]": {
@@ -107,7 +108,9 @@
                     }
                 },
                 {
-                    "scope": ["entity.name.function"],
+                    "scope": [
+                        "entity.name.function"
+                    ],
                     "settings": {
                         "foreground": "#fbc266",
                     }
@@ -120,14 +123,19 @@
                     }
                 },
                 {
-                    "scope": ["storage.type.class.jsdoc"],
+                    "scope": [
+                        "storage.type.class.jsdoc"
+                    ],
                     "settings": {
                         "foreground": "#5f9353",
                         "fontStyle": ""
                     }
                 },
                 {
-                    "scope": ["variable.other.jsdoc", "punctuation.definition.block.tag.jsdoc"],
+                    "scope": [
+                        "variable.other.jsdoc",
+                        "punctuation.definition.block.tag.jsdoc"
+                    ],
                     "settings": {
                         "foreground": "#5f9353",
                         "fontStyle": ""
