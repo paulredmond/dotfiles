@@ -18,6 +18,7 @@
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.lineHeight": 1.5,
     "terminal.integrated.cursorBlinking": false,
+
     "workbench.startupEditor": "none",
     "editor.renderControlCharacters": false,
     "editor.renderIndentGuides": false,
@@ -37,12 +38,16 @@
     "terminal.integrated.cursorStyle": "line",
     "editor.fontLigatures": false,
     "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "workbench.colorTheme": "Darkula",
+    "workbench.colorCustomizations": {
+        "editor.background": "#232525",
+        "sideBar.background": "#3c3f41"
+    },
     "editor.tokenColorCustomizations": {
         "[Darkula]": {
             "types": {
@@ -51,7 +56,12 @@
             },
             "textMateRules": [
                 {
-                    "scope": "storage",
+                    "scope": [
+                        "storage",
+                        "punctuation.terminator.expression",
+                        "punctuation.terminator.statement",
+                        "punctuation.separator.delimiter"
+                    ],
                     "settings": {
                         "foreground": "#CC782F",
                         "fontStyle": ""
@@ -73,12 +83,23 @@
                 },
                 {
                     "scope": [
-                        "variable.other.property.php",
+                        // Uncomment to toggle PHP object public properties to white (i.e., $foo->example)
+                        // "variable.other.property.php",
                         "punctuation.definition.parameters.begin",
                         "punctuation.definition.parameters.end",
                         "punctuation.definition.arguments.begin",
                         "punctuation.definition.arguments.end",
-                        "punctuation.definition.block"
+                        "punctuation.definition.block",
+                        "support.class",
+                        "punctuation.definition.begin.bracket.curly",
+                        "punctuation.definition.end.bracket.curly",
+                        "punctuation.definition.class.begin.bracket.curly",
+                        "punctuation.definition.class.end.bracket.curly",
+                        "punctuation.section.array.begin",
+                        "punctuation.section.array.end",
+                        "keyword.operator.class",
+                        "keyword.operator.key",
+                        "punctuation.separator.key-value"
                     ],
                     "settings": {
                         "foreground": "#a9b7c6ff",
@@ -86,11 +107,30 @@
                     }
                 },
                 {
-                    "scope": [
-                        "entity.name.function"
-                    ],
+                    "scope": ["entity.name.function"],
                     "settings": {
                         "foreground": "#fbc266",
+                    }
+                },
+                {
+                    "scope": "keyword.other.phpdoc.php",
+                    "settings": {
+                        "foreground": "#5f9353",
+                        "fontStyle": "bold underline italic"
+                    }
+                },
+                {
+                    "scope": ["storage.type.class.jsdoc"],
+                    "settings": {
+                        "foreground": "#5f9353",
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "scope": ["variable.other.jsdoc", "punctuation.definition.block.tag.jsdoc"],
+                    "settings": {
+                        "foreground": "#5f9353",
+                        "fontStyle": ""
                     }
                 }
             ]
