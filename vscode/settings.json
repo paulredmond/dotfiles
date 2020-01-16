@@ -41,5 +41,67 @@
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "workbench.colorTheme": "Darkula",
+    "editor.tokenColorCustomizations": {
+        "[Darkula]": {
+            "types": {
+                "fontStyle": "",
+                "foreground": "#9876aaff"
+            },
+            "textMateRules": [
+                {
+                    "scope": "storage",
+                    "settings": {
+                        "foreground": "#CC782F",
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "scope": "entity.name.type",
+                    "settings": {
+                        "foreground": "#a9b7c6ff",
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "scope": "punctuation.definition.variable.php",
+                    "settings": {
+                        "foreground": "#9876aaff",
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "scope": [
+                        "variable.other.property.php",
+                        "punctuation.definition.parameters.begin",
+                        "punctuation.definition.parameters.end",
+                        "punctuation.definition.arguments.begin",
+                        "punctuation.definition.arguments.end",
+                        "punctuation.definition.block"
+                    ],
+                    "settings": {
+                        "foreground": "#a9b7c6ff",
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "scope": [
+                        "entity.name.function"
+                    ],
+                    "settings": {
+                        "foreground": "#fbc266",
+                    }
+                }
+            ]
+        },
+        "textMateRules": [
+            {
+                "scope": "entity.other.inherited-class",
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
     }
 }
