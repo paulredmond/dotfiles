@@ -134,6 +134,21 @@ function prmerge()
     git push
 }
 
+#
+# Link a local composer repository
+# 
+# After, you can require the project normally:
+# `composer require [vendor]/composer-package`
+#
+# If `composer require` doesn't work the first time, you may need to add @dev:
+# `composer require [vendor]/composer-package @dev`
+#
+# See: https://calebporzio.com/bash-alias-composer-link-use-local-folders-as-composer-dependancies/
+#
+composer-link() {
+    composer config repositories.local '{"type": "path", "url": "'$1'"}' --file composer.json
+}
+
 # Start a simple web server from any directory
 function serve()
 {
@@ -195,6 +210,6 @@ export PATH="$HOME/.yarn/bin:$PATH"
 # Fast node manager
 # @see https://github.com/Schniz/fnm
 eval "$(fnm env --multi)"
-
+export PATH="/usr/local/sbin:$PATH"
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
