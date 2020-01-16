@@ -1,8 +1,9 @@
 {
-    "editor.fontSize": 16,
+    "terminal.integrated.shell.osx": "zsh",
+    "editor.fontSize": 14,
     "editor.fontFamily": "Operator Mono",
     "explorer.openEditors.visible": 0,
-    "workbench.statusBar.visible": false,
+    // "workbench.statusBar.visible": false,
     "editor.minimap.enabled": false,
     "window.zoomLevel": 0,
     "files.insertFinalNewline": true,
@@ -12,21 +13,33 @@
         ".php_cs": "php"
     },
     "emmet.triggerExpansionOnTab": true,
-    "workbench.activityBar.visible": false,
-    "editor.wordWrap": "off",
-    "workbench.colorTheme": "Laracasts Contrast (rainglow)",
-    "terminal.integrated.fontSize": 15,
+    // "workbench.activityBar.visible": false,
+    "editor.wordWrap": "on",
+    "terminal.integrated.fontSize": 16,
     "terminal.integrated.lineHeight": 1.5,
     "terminal.integrated.cursorBlinking": false,
-    "terminal.integrated.cursorStyle": "line",
-
     "workbench.startupEditor": "none",
     "editor.renderControlCharacters": false,
     "editor.renderIndentGuides": false,
     "editor.renderLineHighlight": "none",
     "editor.matchBrackets": false,
     // Code hints
-    "editor.parameterHints": false,
-    "editor.quickSuggestions": false,
-    "editor.suggestOnTriggerCharacters": false
+    // "editor.quickSuggestions": false,
+    // "editor.suggestOnTriggerCharacters": false,
+    "editor.autoIndent": true,
+    "editor.scrollBeyondLastLine": true,
+    "editor.tabSize": 4,
+    "editor.trimAutoWhitespace": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.formatOnPaste": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "terminal.integrated.cursorStyle": "line",
+    "editor.fontLigatures": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }
