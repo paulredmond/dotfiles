@@ -8,3 +8,4 @@ atlassian-ide-plugin.xml
 npm-debug.log
 /.vscode
 /scratch.md
+.phpunit.result.cache
