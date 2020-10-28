@@ -1,8 +1,11 @@
 {
-    "editor.fontSize": 16,
+    "terminal.integrated.shell.osx": "zsh",
+    "editor.fontSize": 14,
+    "editor.fontFamily": "Operator Mono",
     "explorer.openEditors.visible": 0,
-    "workbench.statusBar.visible": true,
+    // "workbench.statusBar.visible": false,
     "editor.minimap.enabled": false,
+    "window.zoomLevel": 0,
     "files.insertFinalNewline": true,
     "workbench.editor.enablePreview": false,
     "php-cs-fixer.onsave": true,
@@ -10,43 +13,143 @@
         ".php_cs": "php"
     },
     "emmet.triggerExpansionOnTab": true,
-    "workbench.activityBar.visible": false,
+    // "workbench.activityBar.visible": false,
+    "editor.wordWrap": "on",
     "terminal.integrated.fontSize": 16,
-    "terminal.integrated.lineHeight": 1.3,
+    "terminal.integrated.lineHeight": 1.5,
     "terminal.integrated.cursorBlinking": false,
-    "terminal.integrated.cursorStyle": "line",
     "workbench.startupEditor": "none",
     "editor.renderControlCharacters": false,
     "editor.renderIndentGuides": false,
     "editor.renderLineHighlight": "none",
     "editor.matchBrackets": false,
     // Code hints
-    "editor.parameterHints": false,
-    "editor.quickSuggestions": true,
-    "editor.suggestOnTriggerCharacters": true,
-    "workbench.fontAliasing": "auto",
-    "window.zoomLevel": 0,
-    "editor.lineNumbers": "on",
-    "editor.fontFamily": "Operator Mono",
+    // "editor.quickSuggestions": false,
+    // "editor.suggestOnTriggerCharacters": false,
     "editor.autoIndent": true,
+    "editor.scrollBeyondLastLine": true,
     "editor.tabSize": 4,
     "editor.trimAutoWhitespace": true,
+    "files.trimTrailingWhitespace": true,
     "editor.formatOnPaste": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
-    "terminal.integrated.fontFamily": "monospace",
-    "githubPullRequests.defaultMergeMethod": "squash",
-    "workbench.colorTheme": "Laracasts Contrast (rainglow)",
-    "editor.lineHeight": 25,
-    "[php]": {
-        "editor.defaultFormatter": "junstyle.php-cs-fixer"
-    },
+    "terminal.integrated.cursorStyle": "line",
+    "editor.fontLigatures": false,
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "editor.formatOnSave": true,
-    "explorer.confirmDragAndDrop": false
+    "workbench.colorTheme": "Darkula",
+    "workbench.colorCustomizations": {
+        "[Darkula]": {
+            "editor.background": "#232525",
+            "sideBar.background": "#3c3f41"
+        }
+    },
+    "editor.tokenColorCustomizations": {
+        "[Darkula]": {
+            "types": {
+                "fontStyle": "",
+                "foreground": "#9876aaff"
+            },
+            "textMateRules": [
+                {
+                    "scope": [
+                        "storage",
+                        "punctuation.terminator.expression",
+                        "punctuation.terminator.statement",
+                        "punctuation.separator.delimiter"
+                    ],
+                    "settings": {
+                        "foreground": "#CC782F",
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "scope": "entity.name.type",
+                    "settings": {
+                        "foreground": "#a9b7c6ff",
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "scope": "punctuation.definition.variable.php",
+                    "settings": {
+                        "foreground": "#9876aaff",
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "scope": [
+                        // Uncomment to toggle PHP object public properties to white (i.e., $foo->example)
+                        // "variable.other.property.php",
+                        "punctuation.definition.parameters.begin",
+                        "punctuation.definition.parameters.end",
+                        "punctuation.definition.arguments.begin",
+                        "punctuation.definition.arguments.end",
+                        "punctuation.definition.block",
+                        "support.class",
+                        "punctuation.definition.begin.bracket.curly",
+                        "punctuation.definition.end.bracket.curly",
+                        "punctuation.definition.class.begin.bracket.curly",
+                        "punctuation.definition.class.end.bracket.curly",
+                        "punctuation.section.array.begin",
+                        "punctuation.section.array.end",
+                        "keyword.operator.class",
+                        "keyword.operator.key",
+                        "punctuation.separator.key-value"
+                    ],
+                    "settings": {
+                        "foreground": "#a9b7c6ff",
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "scope": [
+                        "entity.name.function"
+                    ],
+                    "settings": {
+                        "foreground": "#fbc266",
+                    }
+                },
+                {
+                    "scope": "keyword.other.phpdoc.php",
+                    "settings": {
+                        "foreground": "#5f9353",
+                        "fontStyle": "bold underline italic"
+                    }
+                },
+                {
+                    "scope": [
+                        "storage.type.class.jsdoc"
+                    ],
+                    "settings": {
+                        "foreground": "#5f9353",
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "scope": [
+                        "variable.other.jsdoc",
+                        "punctuation.definition.block.tag.jsdoc"
+                    ],
+                    "settings": {
+                        "foreground": "#5f9353",
+                        "fontStyle": ""
+                    }
+                }
+            ]
+        },
+        "textMateRules": [
+            {
+                "scope": "entity.other.inherited-class",
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
+    }
 }
