@@ -37,6 +37,8 @@
     last = log -1 HEAD --numstat
     branchdate = !git for-each-ref --sort='-authordate' --format='%(refname)%09%(authordate)' refs/heads | sed -e 's-refs/heads/--'
     dtag = !git tag -a release-`date +%Y%m%d%H%M`
+    forget="! git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
+    forgetlist="! git fetch -p && git branch -vv | awk '/: gone]/{print $1}'"
     graph = log --graph --pretty=oneline --abbrev-commit
     # List commits in short form
     ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
@@ -60,9 +62,9 @@
 [push]
     default = simple
 [credential]
-	helper = osxkeychain
-#[url "https://github.com"]
-#    insteadOf = git://github.com
+	helper = cache --timeout=999999
+[url "git@bitbucket.org:"]
+    insteadOf = https://bitbucket.org/
 # [url "https://"]
 
     #insteadOf = git://
