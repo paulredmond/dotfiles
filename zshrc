@@ -73,6 +73,7 @@ alias zshrc="$EDITOR ~/.zshrc"
 # PHP
 alias iphp='psysh'
 alias art='php artisan'
+alias sail='bash vendor/bin/sail'
 alias tinker='php artisan tinker'
 alias mfs='php artisan migrate:fresh --seed'
 alias t='phpunit'
@@ -136,7 +137,7 @@ function prmerge()
 
 #
 # Link a local composer repository
-# 
+#
 # After, you can require the project normally:
 # `composer require [vendor]/composer-package`
 #
@@ -213,3 +214,7 @@ eval "$(fnm env --multi)"
 export PATH="/usr/local/sbin:$PATH"
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/predmond/.sdkman"
+[[ -s "/Users/predmond/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/predmond/.sdkman/bin/sdkman-init.sh"
