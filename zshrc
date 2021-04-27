@@ -208,13 +208,10 @@ export PATH="$HOME/.yarn/bin:$PATH"
 # zprof
 # fnm
 
-# Fast node manager
-# @see https://github.com/Schniz/fnm
-eval "$(fnm env --multi)"
-export PATH="/usr/local/sbin:$PATH"
-export PATH=$HOME/.rbenv/bin:$PATH
-eval "$(rbenv init -)"
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/predmond/.sdkman"
 [[ -s "/Users/predmond/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/predmond/.sdkman/bin/sdkman-init.sh"
+
+# fnm
+export PATH=/Users/predmond/.fnm:$PATH
+eval "`fnm env`"
