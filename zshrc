@@ -77,6 +77,8 @@ alias sail='bash vendor/bin/sail'
 alias tinker='php artisan tinker'
 alias mfs='php artisan migrate:fresh --seed'
 alias t='phpunit'
+alias clearlog="truncate -s 0 $PWD/storage/logs/laravel.log"
+alias clearlogs="truncate -s 0 $PWD/storage/logs/*.log"
 
 # NPM
 alias npm-exec='PATH=$(npm bin):$PATH'
