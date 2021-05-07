@@ -6,8 +6,8 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-export EDITOR='subl -n -w'
-
+export VISUAL="subl -n"
+export EDITOR="$VISUAL"
 export TERM="xterm-256color"
 
 # export RBENV_VERSION=1.9.3
@@ -68,7 +68,7 @@ alias rspec='nocorrect rspec '
 alias ....='cd ../../..'
 alias lah='ls -lah'
 alias console='nocorrect console'
-alias zshrc="$EDITOR ~/.zshrc"
+alias zshrc="${VISUAL:-${EDITOR:-vim}} ~/.zshrc"
 
 # PHP
 alias iphp='psysh'
@@ -77,6 +77,8 @@ alias sail='bash vendor/bin/sail'
 alias tinker='php artisan tinker'
 alias mfs='php artisan migrate:fresh --seed'
 alias t='phpunit'
+alias clearlog="truncate -s 0 $(git rev-parse --show-toplevel)/storage/logs/laravel.log"
+alias clearlogs="truncate -s 0 $(git rev-parse --show-toplevel)/storage/logs/*.log"
 
 # NPM
 alias npm-exec='PATH=$(npm bin):$PATH'
