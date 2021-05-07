@@ -87,6 +87,7 @@ alias yw='yarn install && yarn run watch'
 # Git aliases
 alias g='git'
 alias gs='git status'
+alias gst='git status'
 alias wip='git commit -am "WIP"'
 
 # Docker aliases
