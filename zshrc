@@ -40,8 +40,7 @@ bindkey "[D" backward-word
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git composer rake ruby gem symfony2 bundler docker docker-compose laravel5 zsh-autosuggestions)
-
+plugins=(docker docker-compose zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -77,8 +76,8 @@ alias sail='bash vendor/bin/sail'
 alias tinker='php artisan tinker'
 alias mfs='php artisan migrate:fresh --seed'
 alias t='phpunit'
-alias clearlog="truncate -s 0 $(git rev-parse --show-toplevel)/storage/logs/laravel.log"
-alias clearlogs="truncate -s 0 $(git rev-parse --show-toplevel)/storage/logs/*.log"
+alias clearlog='truncate -s 0 $(git rev-parse --show-toplevel)/storage/logs/laravel.log'
+alias clearlogs='truncate -s 0 $(git rev-parse --show-toplevel)/storage/logs/*.log'
 
 # NPM
 alias npm-exec='PATH=$(npm bin):$PATH'
@@ -104,38 +103,6 @@ if [[ -e $HOME/.zshrc.local ]]
 then
     source $HOME/.zshrc.local
 fi
-
-#
-# Provides a review workflow for pull requests. Best used with `prmerge` when ready to merge.
-#
-# Example - checks out the Pull Request 1 and rebases branch against master:
-#     `prfetch master 1`
-#     ... Check it out, test, etc.
-#     `prmerge master 1`
-#     Merges the Pull request, creates a reference to it, then pushes to the remote.
-#
-# @link http://derickrethans.nl/managing-prs-for-php-mongo.html
-#
-function prfetch()
-{
-    git checkout $1
-    git fetch origin pull/$2/head:pr/$2
-    git checkout pr/$2
-    git rebase $1
-}
-
-#
-# Merge a Pull Request that has been reviewed using `prfetch` and push.
-# Example - Merge PR #1 into master and reference the PR in the merge:
-#     `prmerge master 1`
-#
-function prmerge()
-{
-    git checkout $1
-    git merge --no-ff -m "Merge pull request #$2" pr/$2
-    git branch -D pr/$2
-    git push
-}
 
 #
 # Link a local composer repository
