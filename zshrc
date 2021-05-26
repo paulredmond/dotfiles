@@ -40,7 +40,7 @@ bindkey "[D" backward-word
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(docker docker-compose zsh-autosuggestions)
+plugins=(git docker docker-compose zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -61,7 +61,7 @@ alias ack='nocorrect ack'
 alias mongod='nocorrect mongod'
 alias rake='noglob rake'
 alias mate='nocorrect mate'
-alias p='nocorrect pstorm'
+alias p='nocorrect phpstorm'
 #alias npm='nocorrect npm'
 alias rspec='nocorrect rspec '
 alias ....='cd ../../..'
@@ -70,6 +70,7 @@ alias console='nocorrect console'
 alias zshrc="${VISUAL:-${EDITOR:-vim}} ~/.zshrc"
 
 # PHP
+alias c='composer'
 alias iphp='psysh'
 alias art='php artisan'
 alias sail='bash vendor/bin/sail'
