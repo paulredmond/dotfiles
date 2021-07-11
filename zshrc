@@ -6,8 +6,8 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-export EDITOR='subl -n -w'
-
+export VISUAL="subl -n"
+export EDITOR="$VISUAL"
 export TERM="xterm-256color"
 
 # export RBENV_VERSION=1.9.3
@@ -40,8 +40,7 @@ bindkey "[D" backward-word
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git composer rake ruby gem symfony2 bundler docker docker-compose laravel5 zsh-autosuggestions)
-
+plugins=(git docker docker-compose zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -62,21 +61,24 @@ alias ack='nocorrect ack'
 alias mongod='nocorrect mongod'
 alias rake='noglob rake'
 alias mate='nocorrect mate'
-alias p='nocorrect pstorm'
+alias p='nocorrect phpstorm'
 #alias npm='nocorrect npm'
 alias rspec='nocorrect rspec '
 alias ....='cd ../../..'
 alias lah='ls -lah'
 alias console='nocorrect console'
-alias zshrc="$EDITOR ~/.zshrc"
+alias zshrc="${VISUAL:-${EDITOR:-vim}} ~/.zshrc"
 
 # PHP
+alias c='composer'
 alias iphp='psysh'
 alias art='php artisan'
 alias sail='bash vendor/bin/sail'
 alias tinker='php artisan tinker'
 alias mfs='php artisan migrate:fresh --seed'
 alias t='phpunit'
+alias clearlog='truncate -s 0 $(git rev-parse --show-toplevel)/storage/logs/laravel.log'
+alias clearlogs='truncate -s 0 $(git rev-parse --show-toplevel)/storage/logs/*.log'
 
 # NPM
 alias npm-exec='PATH=$(npm bin):$PATH'
@@ -86,6 +88,7 @@ alias yw='yarn install && yarn run watch'
 # Git aliases
 alias g='git'
 alias gs='git status'
+alias gst='git status'
 alias wip='git commit -am "WIP"'
 
 # Docker aliases
@@ -95,45 +98,13 @@ alias dm='docker-machine'
 alias dmnative='echo "Switching to native docker" && eval $(docker-machine env -u)'
 alias docker-cleanup='docker network prune && docker system prune'
 # http://unix.stackexchange.com/questions/22615/how-can-i-get-my-external-ip-address-in-bash/81699#81699
-alias publicip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
 
 # Local config
 if [[ -e $HOME/.zshrc.local ]]
 then
     source $HOME/.zshrc.local
 fi
-
-#
-# Provides a review workflow for pull requests. Best used with `prmerge` when ready to merge.
-#
-# Example - checks out the Pull Request 1 and rebases branch against master:
-#     `prfetch master 1`
-#     ... Check it out, test, etc.
-#     `prmerge master 1`
-#     Merges the Pull request, creates a reference to it, then pushes to the remote.
-#
-# @link http://derickrethans.nl/managing-prs-for-php-mongo.html
-#
-function prfetch()
-{
-    git checkout $1
-    git fetch origin pull/$2/head:pr/$2
-    git checkout pr/$2
-    git rebase $1
-}
-
-#
-# Merge a Pull Request that has been reviewed using `prfetch` and push.
-# Example - Merge PR #1 into master and reference the PR in the merge:
-#     `prmerge master 1`
-#
-function prmerge()
-{
-    git checkout $1
-    git merge --no-ff -m "Merge pull request #$2" pr/$2
-    git branch -D pr/$2
-    git push
-}
 
 #
 # Link a local composer repository
@@ -206,14 +177,10 @@ export PATH="$HOME/.yarn/bin:$PATH"
 # See the top of the file
 # @see https://blog.askesis.pl/post/2017/04/how-to-debug-zsh-startup-time.html
 # zprof
-# fnm
 
-# Fast node manager
-# @see https://github.com/Schniz/fnm
-eval "$(fnm env --multi)"
-export PATH="/usr/local/sbin:$PATH"
-export PATH=$HOME/.rbenv/bin:$PATH
-eval "$(rbenv init -)"
+# fnm
+export PATH=/Users/predmond/.fnm:$PATH
+eval "`fnm env`"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/$USER/.sdkman"
