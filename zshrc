@@ -216,5 +216,5 @@ export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/predmond/.sdkman"
-[[ -s "/Users/predmond/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/predmond/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="/Users/$USER/.sdkman"
+[[ -s "/Users/$USER/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/$USER/.sdkman/bin/sdkman-init.sh"
