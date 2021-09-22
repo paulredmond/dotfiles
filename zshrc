@@ -178,12 +178,11 @@ export PATH="$HOME/.yarn/bin:$PATH"
 # See the top of the file
 # @see https://blog.askesis.pl/post/2017/04/how-to-debug-zsh-startup-time.html
 # zprof
-# fnm
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/predmond/.sdkman"
-[[ -s "/Users/predmond/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/predmond/.sdkman/bin/sdkman-init.sh"
 
 # fnm
 export PATH=/Users/predmond/.fnm:$PATH
 eval "`fnm env`"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/$USER/.sdkman"
+[[ -s "/Users/$USER/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/$USER/.sdkman/bin/sdkman-init.sh"
