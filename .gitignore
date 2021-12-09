@@ -5,3 +5,4 @@ bin/composer
 !Preferences.sublime-settings
 bin/.bootstrap
 bin/composer-temp.phar
+vscode/extensions
