@@ -77,3 +77,5 @@
 	branch = false
 [init]
 	defaultBranch = main
+[log]
+	date = rfc-local
