@@ -71,6 +71,9 @@ alias zshrc="${VISUAL:-${EDITOR:-vim}} ~/.zshrc"
 
 # PHP
 alias c='composer'
+alias ct='composer test'
+alias cl='composer lint'
+alias ca='composer analyse'
 alias iphp='psysh'
 alias art='php artisan'
 alias sail='bash vendor/bin/sail'
