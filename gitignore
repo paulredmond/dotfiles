@@ -9,3 +9,5 @@ npm-debug.log
 /.vscode
 /scratch.md
 .phpunit.result.cache
+phpstan.log
+scratch.php

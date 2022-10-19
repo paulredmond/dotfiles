@@ -68,9 +68,10 @@ alias ....='cd ../../..'
 alias lah='ls -lah'
 alias console='nocorrect console'
 alias zshrc="${VISUAL:-${EDITOR:-vim}} ~/.zshrc"
-
+alias phpcbf='nocorrect phpcbf'
 # PHP
 alias c='composer'
+alias ci='composer install'
 alias iphp='psysh'
 alias art='php artisan'
 alias sail='bash vendor/bin/sail'
