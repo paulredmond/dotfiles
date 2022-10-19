@@ -40,7 +40,7 @@ bindkey "[D" backward-word
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git docker docker-compose zsh-autosuggestions)
+plugins=(git docker docker-compose zsh-autosuggestions artisan)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -72,6 +72,9 @@ alias phpcbf='nocorrect phpcbf'
 # PHP
 alias c='composer'
 alias ci='composer install'
+alias ct='composer test'
+alias cl='composer lint'
+alias ca='composer analyse'
 alias iphp='psysh'
 alias art='php artisan'
 alias sail='bash vendor/bin/sail'
