@@ -184,9 +184,19 @@ export PATH="$HOME/.yarn/bin:$PATH"
 # zprof
 
 # fnm
-export PATH=/Users/predmond/.fnm:$PATH
-eval "`fnm env`"
+if [ -d "$HOME/.fnm" ]
+then
+    export PATH=$HOME/.fnm:$PATH
+    eval "`fnm env`"
+elif [ -d "$HOME/.local/share/fnm" ]
+then
+    export PATH="$HOME/.local/share/fnm:$PATH"
+    eval "`fnm env`"
+else
+	echo "Warn: FNM path not found!"
+fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/$USER/.sdkman"
 [[ -s "/Users/$USER/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/$USER/.sdkman/bin/sdkman-init.sh"
+
