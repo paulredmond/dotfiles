@@ -23,4 +23,3 @@ brew install zoxide
 brew install fd
 ```
 
-
