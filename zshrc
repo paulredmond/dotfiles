@@ -64,7 +64,7 @@ alias rspec='nocorrect rspec'
 
 # Installed Brew Packages that override built-in commands
 alias cat='bat'
-alias find='fd'
+# alias find='fd'
 
 alias lc="fc -ln -1 | tr -d '\n' | pbcopy"
 alias ....='cd ../../..'
