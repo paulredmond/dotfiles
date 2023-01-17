@@ -56,14 +56,17 @@ autoload -Uz compinit && compinit -i
 
 # Default Aliases
 alias ack='nocorrect ack'
-# alias vagrant='nocorrect vagrant'
-#alias subl='nocorrect subl'
 alias mongod='nocorrect mongod'
 alias rake='noglob rake'
 alias mate='nocorrect mate'
 alias p='nocorrect pstorm'
-#alias npm='nocorrect npm'
-alias rspec='nocorrect rspec '
+alias rspec='nocorrect rspec'
+
+# Installed Brew Packages that override built-in commands
+alias cat='bat'
+alias find='fd'
+
+alias lc="fc -ln -1 | tr -d '\n' | pbcopy"
 alias ....='cd ../../..'
 alias lah='ls -lah'
 alias console='nocorrect console'
