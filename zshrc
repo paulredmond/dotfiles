@@ -131,6 +131,39 @@ composer-link() {
     composer config repositories.local '{"type": "path", "url": "'$1'"}' --file composer.json
 }
 
+function phplink()
+{
+    current_version=$(php -r 'echo PHP_MAJOR_VERSION.".".PHP_MINOR_VERSION;')
+    current_package="php@$current_version"
+    current_version_installed=$(brew list | grep "${current_package}")
+    new_version="${1}"
+    if [ -z "${new_version}" ]
+    then
+        new_version_package="php"
+    else
+        new_version_package="php@${1}"
+    fi
+
+    new_version_installed=$(brew list | grep "${new_version_package}")
+
+    if [ -z "$new_version_installed" ]
+    then
+        echo "You requested ${new_version_package}, but it seems to be missing from Brew?"
+        return 1;
+    fi
+
+    echo "The current version in use: ${current_version_installed}"
+    echo "Switching to ${new_version_package}"
+
+    brew unlink php && brew link --overwrite --force "${new_version_package}"
+    result=$?
+    if [ $ret -ne 0 ]
+    then
+        echo "Brew had an issue unlinking ${current_package} or linking ${new_version_package}"
+        return result
+    fi
+}
+
 # Start a simple web server from any directory
 function serve()
 {
