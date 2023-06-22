@@ -61,6 +61,8 @@ alias rake='noglob rake'
 alias mate='nocorrect mate'
 alias p='nocorrect pstorm'
 alias rspec='nocorrect rspec'
+alias f='fnm'
+alias fmn='fnm'
 
 # Installed Brew Packages that override built-in commands
 alias cat='bat'
