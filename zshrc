@@ -102,6 +102,7 @@ alias gs='git status'
 alias gdc='git diff --cached'
 alias gst='git status'
 alias wip='git commit -am "WIP"'
+alias uncommit="git reset --soft HEAD~1"
 
 # Docker aliases
 alias d='docker'
