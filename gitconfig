@@ -31,6 +31,7 @@
     lg = log -p
     dsf = "!git diff --color $@ | diff-so-fancy"
     au = add -u # Add changed files, but not new ones.
+    uncommit = reset --soft HEAD~1
     unstage = reset HEAD
     amend = commit --amend
     pop = stash pop
