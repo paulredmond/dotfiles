@@ -5,6 +5,7 @@ PATH="$HOME/.composer/vendor/bin:$PATH"
 PATH="$HOME/.dotfiles/bin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
 PATH="vendor/bin:$PATH"
+PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH
 
 . "$HOME/.cargo/env"
