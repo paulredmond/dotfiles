@@ -22,18 +22,29 @@
         "validator",
         "workflow"
     ],
+
     "always_show_minimap_viewport": false,
+    "trim_trailing_white_space_on_save": "all",
+    "save_on_focus_lost": true,
     "auto_indent": true,
     "caret_style": "smooth",
-    "color_scheme": "Packages/duotones-sublime-colorschemes/base16-duotone-dark.dark.tmTheme",
-    "draw_white_space": true,
+    "block_caret": false,
+    "theme": "Monokai Pro (Filter Octagon).sublime-theme",
+    "color_scheme": "Monokai Pro (Filter Octagon).sublime-color-scheme",
+    "draw_white_space": "selection",
+    // "draw_white_space": "none",
+    // "draw_white_space": ["selection", "trailing", "isolated"],
     "ensure_newline_at_eof_on_save": true,
     "folder_exclude_patterns":
     [
         ".idea"
     ],
-    "font_face": "Hack",
-    "font_size": 17,
+    "line_numbers": true,
+    "font_size": 14,
+    // "font_face": "IntelOne Mono",
+    "font_face": "Operator Mono Book",
+    "line_padding_bottom": 8,
+    "line_padding_top": 8,
     "ignored_packages":
     [
         "Vintage"
@@ -59,11 +70,10 @@
         "vagrant@homestead",
         "yaml"
     ],
-    "line_padding_bottom": 6,
-    "line_padding_top": 6,
     "smart_indent": true,
     "tab_size": 4,
     "translate_tabs_to_spaces": true,
     "trim_automatic_white_space": true,
-    "word_wrap": true
+    "word_wrap": true,
+    "scroll_past_end": true,
 }
