@@ -224,18 +224,8 @@ export PATH="$HOME/.yarn/bin:$PATH"
 # @see https://blog.askesis.pl/post/2017/04/how-to-debug-zsh-startup-time.html
 # zprof
 
-# fnm
-if [ -d "$HOME/.fnm" ]
-then
-    export PATH=$HOME/.fnm:$PATH
-    eval "`fnm env`"
-elif [ -d "$HOME/.local/share/fnm" ]
-then
-    export PATH="$HOME/.local/share/fnm:$PATH"
-    eval "`fnm env`"
-else
-	echo "Warn: FNM path not found!"
-fi
+# FNM
+eval "$(fnm env --use-on-cd)"
 
 PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH
