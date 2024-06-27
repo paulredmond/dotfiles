@@ -40,7 +40,7 @@ bindkey "[D" backward-word
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git docker docker-compose zsh-autosuggestions artisan)
+plugins=(git docker docker-compose fzf-tab zsh-autosuggestions artisan)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -74,7 +74,7 @@ alias ....='cd ../../..'
 alias lah='ls -lah'
 alias console='nocorrect console'
 alias zshrc="${VISUAL:-${EDITOR:-vim}} ~/.zshrc"
-alias vim="nvim"
+alias vim="nocorrect nvim"
 
 # PHP
 alias phpcbf='nocorrect phpcbf'
@@ -89,6 +89,8 @@ alias sail='bash vendor/bin/sail'
 alias tinker='php artisan tinker'
 alias mfs='php artisan migrate:fresh --seed'
 alias t='phpunit'
+alias pest='nocorrect pest'
+alias pint='nocorrect pint'
 alias clearlog='truncate -s 0 $(git rev-parse --show-toplevel)/storage/logs/laravel.log'
 alias clearlogs='truncate -s 0 $(git rev-parse --show-toplevel)/storage/logs/*.log'
 
@@ -135,6 +137,11 @@ composer-link() {
     composer config repositories.local '{"type": "path", "url": "'$1'"}' --file composer.json
 }
 
+function rerun()
+{
+    while true; do "$1"; sleep 1; done
+}
+
 function phplink()
 {
     current_version=$(php -r 'echo PHP_MAJOR_VERSION.".".PHP_MINOR_VERSION;')
@@ -171,7 +178,7 @@ function phplink()
 # Start a simple web server from any directory
 function serve()
 {
-  python -m SimpleHTTPServer 8000
+  python3 -m http.server 8000
 }
 
 function findprocess()
@@ -235,3 +242,17 @@ export PATH
 export SDKMAN_DIR="/Users/$USER/.sdkman"
 [[ -s "/Users/$USER/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/$USER/.sdkman/bin/sdkman-init.sh"
 
+
+# fnm
+export PATH="/Users/predmond/Library/Application Support/fnm:$PATH"
+
+eval "$(fnm env --use-on-cd)"
+
+# zoxide
+eval "$(zoxide init zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+. "$HOME/.cargo/env"
+
+eval "$(rbenv init - zsh)"
