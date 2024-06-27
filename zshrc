@@ -6,7 +6,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-export VISUAL="subl -n"
+export VISUAL="subl -n -w"
 export EDITOR="$VISUAL"
 export TERM="xterm-256color"
 
