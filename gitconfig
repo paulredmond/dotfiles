@@ -1,6 +1,7 @@
 [user]
-	name = Paul Redmond
+	name = paulredmond
 	email = paulrredmond@gmail.com
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID8kYpLCoChhaPaTcgw+CxSBM4yyoSAmkpgKR52jMVwU
 [core]
     excludesfile = ~/.gitignore
     editor = subl -n -w
@@ -8,6 +9,7 @@
     ignorecase = false
 [commit]
     template = ~/.gitmessage
+    gpgsign = true
 [color]
     ui = true
     diff = auto
@@ -38,7 +40,7 @@
     last = log -1 HEAD --numstat
     branchdate = !git for-each-ref --sort='-authordate' --format='%(refname)%09%(authordate)' refs/heads | sed -e 's-refs/heads/--'
     dtag = !git tag -a release-`date +%Y%m%d%H%M`
-    forget="! git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
+    forget="!git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
     forgetlist="! git fetch -p && git branch -vv | awk '/: gone]/{print $1}'"
     graph = log --graph --pretty=oneline --abbrev-commit
     # List commits in short form
@@ -51,7 +53,10 @@
     la = "!git config -l | grep alias | cut -c 7-"
     graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
     plog = log --pretty=format:\"%h %Cblue%cr%Creset %cn %Cgreen%s%Creset\"
-	r = reset
+    r = reset
+    nah = "!f(){ git reset --hard; git clean -df; if [ -d ".git/rebase-apply" ] || [ -d ".git/rebase-merge" ]; then git rebase --abort; fi; }; f"
+[diff]
+    tool = opendiff
 [mergetool]
     keepBackup = false
 [merge]
@@ -62,6 +67,7 @@
     autocorrect = 1
 [push]
     default = simple
+	autoSetupRemote = true
 [credential]
 	helper = cache --timeout=999999
 [url "git@bitbucket.org:"]
@@ -80,3 +86,7 @@
 	defaultBranch = main
 [log]
 	date = rfc-local
+[gpg]
+	format = ssh
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
