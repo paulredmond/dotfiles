@@ -232,21 +232,13 @@ export PATH="$HOME/.yarn/bin:$PATH"
 # @see https://blog.askesis.pl/post/2017/04/how-to-debug-zsh-startup-time.html
 # zprof
 
-# FNM
-eval "$(fnm env --use-on-cd)"
-
-PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
-export PATH
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/$USER/.sdkman"
-[[ -s "/Users/$USER/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/$USER/.sdkman/bin/sdkman-init.sh"
-
-
 # fnm
-export PATH="/Users/predmond/Library/Application Support/fnm:$PATH"
+FNM_PATH="/Users/paulredmond/Library/Application Support/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/Users/paulredmond/Library/Application Support/fnm:$PATH"
+  eval "`fnm env`"
+fi
 
-eval "$(fnm env --use-on-cd)"
 
 # zoxide
 eval "$(zoxide init zsh)"
@@ -256,3 +248,7 @@ eval "$(zoxide init zsh)"
 . "$HOME/.cargo/env"
 
 eval "$(rbenv init - zsh)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/$USER/.sdkman"
+[[ -s "/Users/$USER/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/$USER/.sdkman/bin/sdkman-init.sh"

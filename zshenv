@@ -1,3 +1,4 @@
+PATH="/opt/homebrew/bin:$PATH"
 PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 PATH="$HOME/google-cloud-sdk/bin:$PATH"
 PATH="$HOME/Library/Python/3.7/bin:$PATH"
