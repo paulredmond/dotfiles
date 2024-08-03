@@ -233,11 +233,7 @@ export PATH="$HOME/.yarn/bin:$PATH"
 # zprof
 
 # fnm
-FNM_PATH="/Users/paulredmond/Library/Application Support/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="/Users/paulredmond/Library/Application Support/fnm:$PATH"
-  eval "$(fnm env --use-on-cd)"
-fi
+eval "$(fnm env --use-on-cd)"
 
 
 # zoxide
