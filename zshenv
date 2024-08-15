@@ -21,3 +21,5 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # @see https://stackoverflow.com/a/60063217
 export NVM_SYMLINK_CURRENT=true
+
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc

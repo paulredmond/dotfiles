@@ -1,0 +1,7 @@
+--type-add
+php:*.php
+
+--type-add
+blade:*.blade.php
+
+--smart-case
