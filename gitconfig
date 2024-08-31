@@ -2,6 +2,10 @@
 	name = paulredmond
 	email = paulrredmond@gmail.com
     signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID8kYpLCoChhaPaTcgw+CxSBM4yyoSAmkpgKR52jMVwU
+[gpg]
+    format = ssh
+[gpg "ssh"]
+    program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [core]
     excludesfile = ~/.gitignore
     editor = subl -n -w
@@ -86,7 +90,3 @@
 	defaultBranch = main
 [log]
 	date = rfc-local
-[gpg]
-	format = ssh
-[gpg "ssh"]
-  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"

@@ -104,7 +104,7 @@ alias g='git'
 alias gs='git status'
 alias gdc='git diff --cached'
 alias gst='git status'
-alias wip='git commit -am "WIP"'
+alias wip='git add . && git commit -am "WIP"'
 alias uncommit="git reset --soft HEAD~1"
 
 # Docker aliases
@@ -236,7 +236,6 @@ export PATH="$HOME/.yarn/bin:$PATH"
 
 # fnm
 eval "$(fnm env --use-on-cd)"
-
 
 # zoxide
 eval "$(zoxide init zsh)"
