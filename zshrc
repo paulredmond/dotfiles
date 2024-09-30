@@ -79,6 +79,7 @@ alias vim="nocorrect nvim"
 # PHP
 alias phpcbf='nocorrect phpcbf'
 alias c='composer'
+alias composerdev='COMPOSER=composer.dev.json php "$(which composer)"'
 alias ci='composer install'
 alias ct='composer test'
 alias cl='composer lint'
@@ -115,6 +116,7 @@ alias dmnative='echo "Switching to native docker" && eval $(docker-machine env -
 alias docker-cleanup='docker network prune && docker system prune'
 # http://unix.stackexchange.com/questions/22615/how-can-i-get-my-external-ip-address-in-bash/81699#81699
 alias ip='dig @resolver4.opendns.com myip.opendns.com +short'
+alias publicip='ip'
 alias wanip='ip'
 alias myip='ip'
 
@@ -247,5 +249,5 @@ eval "$(zoxide init zsh)"
 eval "$(rbenv init - zsh)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/$USER/.sdkman"
-[[ -s "/Users/$USER/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/$USER/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

@@ -1,5 +1,5 @@
 [user]
-	name = paulredmond
+	name = Paul Redmond
 	email = paulrredmond@gmail.com
     signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID8kYpLCoChhaPaTcgw+CxSBM4yyoSAmkpgKR52jMVwU
 [gpg]
