@@ -64,6 +64,7 @@ alias pstorm='nocorrect phpstorm'
 alias rspec='nocorrect rspec'
 alias f='fnm'
 alias fmn='fnm'
+alias pn='pnpm'
 
 # Installed Brew Packages that override built-in commands
 alias cat='bat'
@@ -110,10 +111,13 @@ alias uncommit="git reset --soft HEAD~1"
 
 # Docker aliases
 alias d='docker'
-alias dc='docker-compose'
-alias dm='docker-machine'
-alias dmnative='echo "Switching to native docker" && eval $(docker-machine env -u)'
+alias dc='docker compose'
 alias docker-cleanup='docker network prune && docker system prune'
+alias dangling='docker images -f "dangling=true"'
+alias danglingq='dangling -q'
+alias danglingrmi='docker rmi $(danglingq)'
+
+# IP Address tools
 # http://unix.stackexchange.com/questions/22615/how-can-i-get-my-external-ip-address-in-bash/81699#81699
 alias ip='dig @resolver4.opendns.com myip.opendns.com +short'
 alias publicip='ip'
@@ -247,6 +251,14 @@ eval "$(zoxide init zsh)"
 . "$HOME/.cargo/env"
 
 eval "$(rbenv init - zsh)"
+
+# pnpm
+export PNPM_HOME="/Users/predmond/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
