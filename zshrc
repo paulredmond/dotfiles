@@ -120,6 +120,7 @@ alias danglingrmi='docker rmi $(danglingq)'
 # IP Address tools
 # http://unix.stackexchange.com/questions/22615/how-can-i-get-my-external-ip-address-in-bash/81699#81699
 alias ip='dig @resolver4.opendns.com myip.opendns.com +short'
+alias ip6='dig @resolver1.ipv6-sandbox.opendns.com AAAA myip.opendns.com +short -6'
 alias publicip='ip'
 alias wanip='ip'
 alias myip='ip'
