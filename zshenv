@@ -1,3 +1,5 @@
+export XDG_CONFIG_HOME="$HOME/.config"
+
 PATH="/opt/homebrew/bin:$PATH"
 PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 PATH="$HOME/google-cloud-sdk/bin:$PATH"
@@ -23,3 +25,8 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export NVM_SYMLINK_CURRENT=true
 
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
+
+# Load machine-specific custom environment variables if the file exists
+if [ -f "$HOME/.zshenv.local" ]; then
+    source "$HOME/.zshenv.local"
+fi
