@@ -27,6 +27,7 @@ export NVM_SYMLINK_CURRENT=true
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 
 # Load machine-specific custom environment variables if the file exists
-if [ -f "$HOME/.zshenv.local" ]; then
-    source "$HOME/.zshenv.local"
+if [[ -e $HOME/.zshenv.local ]]
+then
+    . $HOME/.zshenv.local
 fi

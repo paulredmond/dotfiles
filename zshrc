@@ -122,8 +122,10 @@ alias danglingrmi='docker rmi $(danglingq)'
 alias ip='dig @resolver4.opendns.com myip.opendns.com +short'
 alias ip6='dig @resolver1.ipv6-sandbox.opendns.com AAAA myip.opendns.com +short -6'
 alias publicip='ip'
-alias wanip='ip'
 alias myip='ip'
+alias wanip='ip'
+alias wanip4='dig @resolver4.opendns.com myip.opendns.com +short -4'
+alias wanip6='dig @resolver1.ipv6-sandbox.opendns.com AAAA myip.opendns.com +short -6'
 
 # Local config
 if [[ -e $HOME/.zshrc.local ]]
