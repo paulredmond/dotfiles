@@ -215,7 +215,7 @@
     "goto_anything_file_preview": true,
     "dark_color_scheme": "Mariana.sublime-color-scheme",
     "light_color_scheme": "Breakers.sublime-color-scheme",
-    "preview_on_click": false,
+    "preview_on_click": true,
     // Monokai Pro
     "monokai_pro_minimal": false, // Default = false
     "monokai_pro_file_icons": true, // Default = true
@@ -228,6 +228,6 @@
     "monokai_pro_ui_font_face": "JetBrainsMono-Regular", // Default = ""
     // "monokai_pro_ui_font_face": "JetBrainsMono-Light", // Default = ""
     // "monokai_pro_ui_font_face": "Menlo-Regular", // Default = ""
-    "monokai_pro_style_title_bar": true, // Default = false
+    "monokai_pro_style_title_bar": false, // Default = false
     "monokai_pro_sidebar_headings": false, // Default = false
 }
