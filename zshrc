@@ -93,6 +93,8 @@ alias mfs='php artisan migrate:fresh --seed'
 alias t='phpunit'
 alias pest='nocorrect pest'
 alias pint='nocorrect pint'
+alias pintd='pint --dirty'
+alias pd='pint --dirty'
 alias clearlog='truncate -s 0 $(git rev-parse --show-toplevel)/storage/logs/laravel.log'
 alias clearlogs='truncate -s 0 $(git rev-parse --show-toplevel)/storage/logs/*.log'
 
