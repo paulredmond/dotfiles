@@ -64,7 +64,7 @@
 [mergetool]
     keepBackup = false
 [merge]
-	tool = opendiff
+	tool = vscode
 [hub]
     protocol = https
 [help]
@@ -90,3 +90,5 @@
 	defaultBranch = main
 [log]
 	date = rfc-local
+[mergetool "vscode"]
+	cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED

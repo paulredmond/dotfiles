@@ -14,3 +14,6 @@ phpstan.log
 /scratch.txt
 /scratch.js
 /scratch.json
+/.claude/settings.local.json
+/.chief/
+/.claude/worktrees/
