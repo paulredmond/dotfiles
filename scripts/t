@@ -5,11 +5,11 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    items=`find ~/Code/ocusell -maxdepth 1 -mindepth 1 -type d`
-    items+=`echo -e "\n~/Code/paulredmond"`
+    items=`find ~/Code/ocusell -maxdepth 1 -mindepth 1 -type d 2>/dev/null`
+    items+=`echo -e "\n$(find ~/Code -maxdepth 2 -mindepth 2 -type d -not -path '*/ocusell/*' 2>/dev/null)"`
     items+=`echo -e "\n~/.dotfiles"`
     items+=`echo -e "\n/tmp"`
-    selected=`echo "$items" | fzf`
+    selected=`echo "$items" | fzf --delimiter='/' --with-nth='-2,-1'`
 fi
 
 dirname=`basename $selected | sed 's/\./_/g'`

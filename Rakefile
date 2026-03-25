@@ -51,6 +51,10 @@ task :install do
   t_dest = local_bin + '/t'
   File.symlink(t_src, t_dest) && puts("Symlinking #{t_dest} -> #{t_src}") unless File.symlink?(t_dest) || File.exists?(t_dest)
 
+  ocuskills_src  = current_dir + '/scripts/ocuskills-update'
+  ocuskills_dest = local_bin + '/ocuskills-update'
+  File.symlink(ocuskills_src, ocuskills_dest) && puts("Symlinking #{ocuskills_dest} -> #{ocuskills_src}") unless File.symlink?(ocuskills_dest) || File.exists?(ocuskills_dest)
+
   puts "Installation complete!"
 
 end

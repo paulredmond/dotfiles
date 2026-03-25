@@ -1,0 +1,8 @@
+#!/bin/sh
+npx skills add git@github.com:ocusellinc/ocuskills.git \
+    --skill '*' \
+    --agent universal \
+    --agent claude-code \
+    -y \
+    --global
+
