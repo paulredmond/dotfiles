@@ -1,3 +1,4 @@
+
 # Uncomment to profile zsh startup
 # See the bottom of the file
 # @see https://blog.askesis.pl/post/2017/04/how-to-debug-zsh-startup-time.html
@@ -277,3 +278,6 @@ export JAVA_HOME="/opt/homebrew/opt/openjdk@25/libexec/openjdk.jdk/Contents/Home
 
 # Added by Antigravity
 export PATH="/Users/paulredmond/.antigravity/antigravity/bin:$PATH"
+
+# Homebrew Ocusell Tap
+export HOMEBREW_GITHUB_API_TOKEN=$(gh auth token)
