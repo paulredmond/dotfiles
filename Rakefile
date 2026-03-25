@@ -1,4 +1,5 @@
 require 'mkmf'
+require 'fileutils'
 
 class String
     def red;   "\033[31m#{self}\033[0m" end
@@ -42,6 +43,13 @@ task :install do
     local_zsh.puts("# Local modifications")
     local_zsh.close
   end
+
+  # Symlink scripts/t to ~/.local/bin/t
+  local_bin = home + '/.local/bin'
+  FileUtils.mkdir_p(local_bin)
+  t_src  = current_dir + '/scripts/t'
+  t_dest = local_bin + '/t'
+  File.symlink(t_src, t_dest) && puts("Symlinking #{t_dest} -> #{t_src}") unless File.symlink?(t_dest) || File.exists?(t_dest)
 
   puts "Installation complete!"
 
