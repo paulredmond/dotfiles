@@ -280,3 +280,6 @@ export PATH="/Users/paulredmond/.antigravity/antigravity/bin:$PATH"
 
 # Homebrew Ocusell Tap
 export HOMEBREW_GITHUB_API_TOKEN=$(gh auth token)
+
+# opencode
+export PATH=/Users/paulredmond/.opencode/bin:$PATH
