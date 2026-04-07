@@ -8,7 +8,7 @@ class String
 end
 
 def get_excludes
-  exclude  = %w(.git .gitignore README.md Rakefile mkmf.log SublimeText iterm gnome Fonts doc bin)
+  exclude  = %w(.git .gitignore README.md Rakefile mkmf.log SublimeText iterm gnome Fonts doc bin bat)
 
   if (File.exists?('.gitignore'))
     File.open('.gitignore', 'r').each_line do |line|
@@ -54,6 +54,35 @@ task :install do
   ocuskills_src  = current_dir + '/scripts/ocuskills-update'
   ocuskills_dest = local_bin + '/ocuskills-update'
   File.symlink(ocuskills_src, ocuskills_dest) && puts("Symlinking #{ocuskills_dest} -> #{ocuskills_src}") unless File.symlink?(ocuskills_dest) || File.exists?(ocuskills_dest)
+
+  # Install bat config and themes
+  bat_src = current_dir + '/bat'
+  bat_dest = home + '/.config/bat'
+  if Dir.exist?(bat_src)
+    FileUtils.mkdir_p(bat_dest + '/themes')
+
+    # Symlink config file
+    config_src = bat_src + '/config'
+    config_dest = bat_dest + '/config'
+    if File.exist?(config_src) && !File.exist?(config_dest)
+      File.symlink(config_src, config_dest)
+      puts "Symlinking #{config_dest} -> #{config_src}"
+    end
+
+    # Copy theme files
+    Dir.glob(bat_src + '/themes/*.tmTheme').each do |theme|
+      dest = bat_dest + '/themes/' + File.basename(theme)
+      unless File.exist?(dest)
+        FileUtils.cp(theme, dest)
+        puts "Installing bat theme #{File.basename(theme)}"
+      end
+    end
+
+    if find_executable('bat')
+      puts "Rebuilding bat cache..."
+      system('bat cache --build')
+    end
+  end
 
   puts "Installation complete!"
 
